@@ -1,0 +1,72 @@
+/* colors */
+
+$clr-neutral-200 : #e3dac9;
+
+
+
+
+$clr-neutral-700-10: rgba(49, 49, 63, 0.1);
+$clr-neutral-700-20: rgba(49, 49, 63, 0.2);
+$clr-neutral-700-30: rgba(49, 49, 63, 0.302);
+$clr-neutral-700-40: rgba(49, 49, 63, 0.4);
+$clr-neutral-700-50: rgba(49, 49, 63, 0.5);
+$clr-neutral-700-60: rgba(49, 49, 63, 0.6);
+$clr-neutral-700-70: rgba(49, 49, 63, 0.7);
+$clr-neutral-700-75: rgba(49, 49, 63, 0.75);
+$clr-neutral-700-80: rgba(49, 49, 63, 0.8);
+$clr-neutral-700-85: rgba(49, 49, 63, 0.85);
+$clr-neutral-700-90: rgba(49, 49, 63, 0.9);
+$clr-neutral-700-95: rgba(49, 49, 63, 0.95);
+$clr-neutral-700: hsl(240, 13%, 22%);
+
+$clr-neutral-1000: hsl(0, 0%, 0%);
+
+$clr-accent-blue : hsl(191, 47%, 51%);
+$clr-accent-salmon-transparent : hsla(14, 100%, 65%, 0.3);
+$clr-accent-salmon : hsl(14, 100%, 65%);
+$clr-accent-salmon-dark: hsl(14, 70%, 57%);
+$clr-accent-green : hsl(171, 50%, 40%);
+
+
+/*typography */
+
+$ff-primary: 'JetBrains Mono', sans-serif;
+$ff-secondary: 'JetBrains Mono', sans-serif;
+
+$fs-180: 1.125rem;
+$fs-200: 1.25rem;
+$fs-220: 1.375rem;
+$fs-240: 1.5rem;
+$fs-260: 1.625rem;
+$fs-280: 1.875rem;
+$fs-320: 2rem;
+$fs-400: 2.5rem;
+$fs-480: 3rem;
+$fs-490: 3.125rem;
+$fs-520: 3.5rem;
+$fs-600: 4rem;
+$fs-800: 5rem;
+
+$fw-400: 400;
+$fw-600: 600;
+
+
+/* spacing */
+
+$sz-40: 0.25rem;
+$sz-70: 0.4375rem;
+$sz-100: 0.625rem;
+$sz-130: 0.8125rem;
+$sz-180: 1.125rem;
+$sz-240: 1.5rem;
+$sz-360: 2.25rem;
+$sz-400: 2.5rem;
+$sz-480: 3rem;
+$sz-600: 4rem;
+$sz-800: 5rem;
+$sz-1500: 7.5rem;
+
+
+/* queries */
+
+$min-width-desktop: 70em;

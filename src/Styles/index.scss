@@ -1,0 +1,14 @@
+@use "./Abstracts/reset";
+@use "./Abstracts/variables" as *;
+
+#root {
+    position: relative;
+    z-index: -10000;
+}
+
+
+body {
+    background-color: #F8FAFC;
+    z-index: -1000000;
+    position: relative;
+}

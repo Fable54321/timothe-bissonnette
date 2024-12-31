@@ -1,0 +1,344 @@
+@use "../../../Styles/Abstracts/variables" as *;
+
+
+
+.about-me {
+
+
+    &__wrapper {
+
+      
+
+
+        position: relative;
+       
+        z-index: -10;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+
+        gap: $fs-480;
+
+
+        @media(min-width:$min-width-desktop) {
+            display: flex;
+            justify-content: center;
+            min-width: 100vw;
+            
+
+        }
+    }
+
+    &__cards-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        gap: $sz-240;
+
+        @media(min-width: $min-width-desktop) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            gap: $fs-480;
+            z-index: -1;
+
+        }
+
+
+    }
+
+
+
+    &__title {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $clr-neutral-200;
+        font-family: $ff-primary;
+        font-size: min($fs-490, 15vw);
+        font-weight: 700;
+        line-height: 110%;
+        text-shadow: 3px 5px 0px black;
+        -webkit-text-stroke-color: $clr-neutral-700;
+        -webkit-text-stroke-width: 2px;
+        z-index: 10;
+
+        @for $i from 1 through 18 {
+            &--#{$i} {
+                opacity: 0;
+                animation: fadeIn 1s ease-in-out forwards;
+                animation-fill-mode: forwards;
+                animation-delay: ($i - 1) * 0.25s;
+                position: relative;
+
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        @media(min-width:$min-width-desktop) {
+
+            top: 0%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            line-height: 100%;
+            font-size: $fs-800;
+            text-shadow: 4px 0px 20px black, -4px 0px 20px black;
+
+
+            @for $i from 1 through 18 {
+                &--#{$i} {
+                    display: inline-block;
+                    opacity: 0;
+                    animation: fadeIn 1s ease-in-out forwards;
+                    animation-fill-mode: forwards;
+                    animation-delay: ($i - 1) * 0.25s;
+                    position: relative;
+
+                    @if $i ==1 {
+                        top: -2px;
+                        transform: rotate(-12deg);
+                    }
+
+                    @else if $i ==2 {
+                        top: -15px;
+                        transform: rotate(-10deg);
+                    }
+
+                    @else if $i ==3 {
+                        top: -24px;
+                        transform: rotate(-7deg);
+                    }
+
+                    @else if $i ==4 {
+                        top: -30px;
+                        left: 2px;
+                        transform: rotate(0deg);
+                        text-shadow: -2px 0px 10px rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), -5px 0px 10px rgba(0, 0, 0, 0.6), 5px 0px 10px rgba(0, 0, 0, 0.6);
+                    }
+
+                    @else if $i ==5 {
+                        top: -24px;
+                        transform: rotate(7deg);
+                    }
+
+                    @else if $i ==6 {
+                        top: -15px;
+                        transform: rotate(10deg);
+                    }
+
+                    @else if $i ==7 {
+                        top: -2px;
+                        transform: rotate(12deg);
+                    }
+                }
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            /*******************************************************/
+
+        }
+    }
+
+
+
+    &__card--a {
+        width: clamp(300px, 85.533333vw, 500px);
+
+        min-height: 500px;
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        background: linear-gradient(to bottom, rgba(51, 153, 137, 0.9) 10%, rgba(51, 153, 137, 0.85) 25%, rgba(51, 153, 137, 0.75) 50%, rgba(51, 153, 137, 0.65) 75%, rgba(51, 153, 137, 0.55) 90%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: $sz-360;
+        border-bottom-left-radius: $sz-360;
+        border-radius: $sz-360;
+        -webkit-box-shadow: 0px -10px 13px black, -12px 0px 13px -7px #000000, 12px 0px 13px -7px #000000, inset 5px 5px 15px 5px rgba(255, 255, 255, 0);
+        box-shadow: 0px -10px 13px black, -12px 0px 13px -7px #000000, 12px 0px 13px -7px #000000, inset 5px 5px 15px 5px rgba(255, 255, 255, 0);
+
+        @media(min-width:$min-width-desktop) {
+
+
+            min-height: 400px;
+            background: linear-gradient(to left, rgba(51, 153, 137, 0.9) 10%, rgba(51, 153, 137, 0.85) 25%, rgba(51, 153, 137, 0.75) 50%, rgba(51, 153, 137, 0.65) 75%, rgba(51, 153, 137, 0.55) 90%);
+            width: clamp(500px, 40vw, 700px);
+            justify-content: flex-end;
+            padding-right: $sz-360;
+            box-shadow: 7px 0px 7px 0px rgba(0, 0, 0, 0.3), -7px 0px 7px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        &__inner {
+            width: 95%;
+            height: 95%;
+            background-color: $clr-neutral-200;
+            border-radius: $sz-360;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-box-shadow: -12px 0px 13px -7px #000000, 12px 0px 13px -7px #000000, inset 5px 5px 15px 5px rgba(255, 255, 255, 0);
+            box-shadow: -12px 0px 13px -7px #000000, 12px 0px 13px -7px #000000, inset 5px 5px 15px 5px rgba(255, 255, 255, 0);
+            padding-block: 70px;
+
+
+
+
+            @media(min-width:$min-width-desktop) {
+                justify-content: flex-end;
+                width: 90%;
+                height: 380px;
+                padding-right: $sz-360;
+
+            }
+
+            &__img {
+                width: 90%;
+                max-width: 378px;
+                aspect-ratio: 1 / 1;
+                border-radius: $sz-360;
+                object-fit: cover;
+
+                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5), 0px -8px 10px rgba(0, 0, 0, 0.5), inset 0px 0px 15px rgba(255, 255, 255, 0.5), 5px 0px 10px rgba(0, 0, 0, 0.5), -5px 0px 10px rgba(0, 0, 0, 0.5);
+
+                @media(min-width:$min-width-desktop) {
+                    max-width: none;
+                    width: 80%;
+                    position: relative;
+                    z-index: 0;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8), 0px 0px 30px rgba(0, 0, 0, 0.6), inset 0px 0px 15px rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+
+    &__card--b {
+        background: linear-gradient(to top, rgba(51, 153, 137, 0.9) 10%, rgba(51, 153, 137, 0.85) 25%, rgba(51, 153, 137, 0.75) 50%, rgba(51, 153, 137, 0.65) 75%, rgba(51, 153, 137, 0.55) 90%);
+        @include card-general;
+
+        @media(min-width:$min-width-desktop) {
+
+
+            min-height: 400px;
+            width: clamp(500px, 40vw, 700px);
+            background: linear-gradient(to right, rgba(51, 153, 137, 0.9) 10%, rgba(51, 153, 137, 0.85) 25%, rgba(51, 153, 137, 0.75) 50%, rgba(51, 153, 137, 0.65) 75%, rgba(51, 153, 137, 0.55) 90%);
+            box-shadow: 7px 0px 7px 0px rgba(0, 0, 0, 0.3), -7px 0px 7px 0px rgba(0, 0, 0, 0.3);
+            justify-content: flex-start;
+            padding-left: $sz-360;
+
+        }
+
+        &__inner {
+            @include inner-card-general;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+
+
+
+            @media(min-width:$min-width-desktop) {
+                width: 90%;
+                min-height: 95%;
+                gap: $sz-360;
+            }
+
+
+            &__text__wrapper {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4));
+                background-size: 100% 70%;
+                background-repeat: no-repeat;
+                background-position: 0% 50%;
+                color: $clr-neutral-700;
+                font-family: $ff-secondary;
+                font-size: clamp($fs-180, 5vw, $fs-260);
+                font-weight: $fw-400;
+                line-height: 1.1em;
+                text-shadow: -1px 1px 3px $clr-neutral-1000;
+
+
+
+                @media (min-width: $min-width-desktop) {
+                    width: 110%;
+                    font-size: $fs-200;
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4));
+                    justify-content: flex-start;
+                    text-shadow: none;
+                    border-radius: $sz-240;
+                }
+
+                @media(min-width: 95em) {
+                    font-size: $fs-240;
+                }
+
+
+            }
+
+            &__text {
+                width: clamp(250px, 70vw, 375px);
+                padding-block: 1%;
+
+                @media (min-width: $min-width-desktop) {
+                    width: 80%;
+                    padding-block: 0;
+
+                    padding-left: $sz-240;
+                    padding-left: 6%;
+                }
+            }
+
+            &__cta {
+                width: 110%;
+                background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.23) -40%, $clr-accent-salmon 69.79%, $clr-accent-salmon 100%);
+                padding-block: $sz-180;
+                border-radius: $sz-180;
+                border: none;
+                box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.4), 2px 19px 31px rgba(0, 0, 0, 0.2);
+                font-family: $ff-secondary;
+                font-size: $fs-180;
+                font-weight: $fw-600;
+
+                
+                @media(min-width: $min-width-desktop) {
+                    &:hover {
+                        cursor: pointer;
+                        background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.23) -40%, $clr-accent-salmon-dark 69.79%, $clr-accent-salmon-dark 100%);
+
+                    }
+                }
+               
+
+
+            }
+            
+        }
+    }
+
+
+
+
+}
