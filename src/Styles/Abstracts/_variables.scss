@@ -1,36 +1,21 @@
 /* colors */
 
-$clr-neutral-200 : #e3dac9;
+$clr-neutral-200 : #EEEEFF;
 
 
 
-
-$clr-neutral-700-10: rgba(49, 49, 63, 0.1);
-$clr-neutral-700-20: rgba(49, 49, 63, 0.2);
-$clr-neutral-700-30: rgba(49, 49, 63, 0.302);
-$clr-neutral-700-40: rgba(49, 49, 63, 0.4);
-$clr-neutral-700-50: rgba(49, 49, 63, 0.5);
-$clr-neutral-700-60: rgba(49, 49, 63, 0.6);
-$clr-neutral-700-70: rgba(49, 49, 63, 0.7);
-$clr-neutral-700-75: rgba(49, 49, 63, 0.75);
-$clr-neutral-700-80: rgba(49, 49, 63, 0.8);
-$clr-neutral-700-85: rgba(49, 49, 63, 0.85);
-$clr-neutral-700-90: rgba(49, 49, 63, 0.9);
-$clr-neutral-700-95: rgba(49, 49, 63, 0.95);
-$clr-neutral-700: hsl(240, 13%, 22%);
+$clr-neutral-300: hsl(204, 100%, 93%);
+$clr-neutral-700: hsl(212, 100%, 24%);
 
 $clr-neutral-1000: hsl(0, 0%, 0%);
 
-$clr-accent-blue : hsl(191, 47%, 51%);
-$clr-accent-salmon-transparent : hsla(14, 100%, 65%, 0.3);
-$clr-accent-salmon : hsl(14, 100%, 65%);
-$clr-accent-salmon-dark: hsl(14, 70%, 57%);
-$clr-accent-green : hsl(171, 50%, 40%);
+$clr-accent-blue : hsl(188, 83%, 33%);
+$clr-accent-ylw : #efc52e;
 
 
 /*typography */
 
-$ff-primary: 'JetBrains Mono', sans-serif;
+$ff-primary: 'Lora', sans-serif;
 $ff-secondary: 'JetBrains Mono', sans-serif;
 
 $fs-180: 1.125rem;
@@ -53,18 +38,80 @@ $fw-600: 600;
 
 /* spacing */
 
-$sz-40: 0.25rem;
-$sz-70: 0.4375rem;
-$sz-100: 0.625rem;
-$sz-130: 0.8125rem;
-$sz-180: 1.125rem;
-$sz-240: 1.5rem;
-$sz-360: 2.25rem;
-$sz-400: 2.5rem;
-$sz-480: 3rem;
-$sz-600: 4rem;
-$sz-800: 5rem;
-$sz-1500: 7.5rem;
+
+$sz-010: 0.1rem;
+$sz-020: 0.2rem;
+$sz-030: 0.3rem;
+$sz-040: 0.4rem;
+$sz-050: 0.5rem;
+$sz-060: 0.6rem;
+$sz-070: 0.7rem;
+$sz-080: 0.8rem;    
+$sz-090: 0.9rem;
+$sz-100: 1rem;
+$sz-120: 1.2rem;
+$sz-130: 1.3rem;
+$sz-140: 1.4rem;
+$sz-150: 1.5rem;
+$sz-160: 1.6rem;
+$sz-180: 1.8rem;
+$sz-200: 2rem;
+$sz-210: 2.1rem;
+$sz-220: 2.2rem;
+$sz-240: 2.4rem;
+$sz-250: 2.5rem;
+$sz-260: 2.6rem;
+$sz-270: 2.7rem;
+$sz-280: 2.8rem;
+$sz-290: 2.9rem;
+$sz-300: 3rem;
+$sz-320: 3.2rem;
+$sz-340: 3.4rem;
+$sz-360: 3.6rem;
+$sz-370: 3.7rem;
+$sz-380: 3.8rem;
+$sz-390: 3.9rem;
+$sz-400: 4rem;
+$sz-420: 4.2rem;
+$sz-430: 4.3rem;
+$sz-440: 4.4rem;
+$sz-450: 4.5rem;
+$sz-460: 4.6rem;
+$sz-470: 4.7rem;
+$sz-480: 4.8rem;
+$sz-490: 4.9rem;
+$sz-500: 5rem;
+$sz-520: 5.2rem;
+$sz-530: 5.3rem;
+$sz-540: 5.4rem;
+$sz-550: 5.5rem;
+$sz-560: 5.6rem;
+$sz-570: 5.7rem;
+$sz-580: 5.8rem;
+$sz-590: 5.9rem;
+$sz-600: 6rem;
+$sz-620: 6.2rem;
+$sz-630: 6.3rem;
+$sz-640: 6.4rem;
+$sz-650: 6.5rem;
+$sz-660: 6.6rem;
+$sz-670: 6.7rem;
+$sz-680: 6.8rem;
+$sz-690: 6.9rem;
+$sz-700: 7rem;
+$sz-720: 7.2rem;
+$sz-730: 7.3rem;
+$sz-740: 7.4rem;
+$sz-750: 7.5rem;
+$sz-760: 7.6rem;
+$sz-770: 7.7rem;
+$sz-780: 7.8rem;
+$sz-790: 7.9rem;
+$sz-800: 8rem;
+$sz-820: 8.2rem;
+$sz-830: 8.3rem;
+$sz-840: 8.4rem;
+$sz-850: 8.5rem;
 
 
 /* queries */

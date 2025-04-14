@@ -48,7 +48,15 @@ p {
 }
 
 body {
-  background-color: #F8FAFC;
+  background-color: hsl(212, 100%, 24%);
   z-index: -1000000;
   position: relative;
+}
+
+.display-none {
+  display: none;
+}
+
+html, body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=index.css.map */

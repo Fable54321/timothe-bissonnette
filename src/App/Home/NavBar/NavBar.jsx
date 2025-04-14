@@ -1,54 +1,65 @@
-import { Link, useLocation } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import styles from './NavBar.module.css'
-import navIcon  from '../../../assets/stash_burger-classic-duotone.png'
-import closeNav from '../../../assets/close-nav.png'
-import { useMediaQuery } from 'react-responsive'
-import { useState } from 'react'
+import menu from '../../../assets/images/menu.png'
+import logo from '../../../assets/images/logo.png'
+import { useState, useEffect } from 'react'
 
-const NavBar = () => {
 
-  const isMobile = useMediaQuery({
-    query: '(max-width: 70em)'})
 
-  const [mobileNavOpen, setMobileNavOpen]= useState(false);  
+
+
+const NavBar = ({ pull, setPull }) => {
+
+  const [fixed, setFixed] = useState(true);
   
-  const location = useLocation();
-  
+
+  useEffect(() => {
+    if (!pull) {
+      setFixed(true);
+    }
+  },[pull])
+
+  const handleClick = () => {
+    setPull(!pull);
+    setFixed(false);
+
+
+  };
 
   return (
-    <header className={styles["nav-bar"]} aria-label="Main Navigation">
-      <h1 className={styles["nav-bar__title"]}>
-        {location.pathname === "/projects" ? "My " : "Timothe Bissonnette"}
-        <br style={{ display: isMobile ? "block" : "none" }} />
-        {location.pathname === "/projects" ? "Projects" : ""}
-      </h1>
-      <img
-        className={!mobileNavOpen ? styles["nav-bar__icon--close"] : styles["nav-bar__icon--open"]}
-        src={mobileNavOpen ? closeNav : navIcon}
-        alt={mobileNavOpen ? "Close navigation menu" : "Open navigation menu"}
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
-        style={{ display: isMobile ? "block" : "none" }}
-        aria-expanded={mobileNavOpen}
-      />
-      <nav aria-label="Primary">
-        <ul
-          className={
-            [styles["nav-bar__links"], mobileNavOpen ? styles["nav-bar__links--mobile--open"] : ""].join(" ")
-          }
-        >
-          <li>
-            <Link to="/" aria-label="Navigate to About Me page">About Me</Link>
-          </li>
-          <li>
-            <Link to="/projects" aria-label="Navigate to My Projects page">My Projects</Link>
-          </li>
-          <li>
-            <Link to="/contact" aria-label="Navigate to Contact Me page">Contact Me</Link>
-          </li>
-        </ul>
-      </nav>
+    <>
+    
+    <header id="nav" className={styles["nav-bar"]} aria-label="Main Navigation">
+      
+     
+      <div className={styles["nav-bar__logo--wrapper"]}>
+        <img
+          className={styles["nav-bar__logo"]}
+          src={logo}
+          alt="Logo"
+          aria-label="Navigate to the Home page"
+        />
+      </div>
+      <button
+        
+        className={fixed ? styles["nav-bar__menu--button--fixed"] : styles["nav-bar__menu--button"]}
+        aria-label="Toggle navigation"
+        onClick={() => handleClick()}
+      >
+        <img
+          className={styles["nav-bar__menu"]}
+          src={menu}
+          alt="Menu"
+        />
+      </button>
     </header>
+    </>
   );
 }
+
+NavBar.propTypes = {
+  pull: PropTypes.bool.isRequired,
+  setPull: PropTypes.func.isRequired
+};
 
 export default NavBar
