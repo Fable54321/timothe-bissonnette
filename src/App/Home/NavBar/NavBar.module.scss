@@ -91,10 +91,11 @@
     position: absolute;
     z-index: 1000;
     right: 2%;
-    top: 60%;
+    top: 61%;
     transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.5s ease-in-out 700ms;
+    
   }
 
 
@@ -109,7 +110,7 @@
     top: 16%;
     transform: translateY(-50%);
     opacity: 1;
-    transition: opacity 0.9s ease-in-out 700ms;
+    animation: opacity 0.9s ease-in-out;
   }
 
   @keyframes rotateIn {

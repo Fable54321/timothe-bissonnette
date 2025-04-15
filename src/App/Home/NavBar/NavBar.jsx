@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 
 
 
-const NavBar = ({ pull, setPull }) => {
+const NavBar = ({ pull, setPull, display, setDisplay }) => {
 
   const [fixed, setFixed] = useState(true);
   
@@ -20,6 +20,9 @@ const NavBar = ({ pull, setPull }) => {
   },[pull])
 
   const handleClick = () => {
+
+    setDisplay(false);
+
     setPull(!pull);
     setFixed(false);
 
@@ -41,7 +44,7 @@ const NavBar = ({ pull, setPull }) => {
         />
       </div>
       <button
-        
+        style={{display: display ? "block" : "none"}}
         className={fixed ? styles["nav-bar__menu--button--fixed"] : styles["nav-bar__menu--button"]}
         aria-label="Toggle navigation"
         onClick={() => handleClick()}
@@ -59,7 +62,9 @@ const NavBar = ({ pull, setPull }) => {
 
 NavBar.propTypes = {
   pull: PropTypes.bool.isRequired,
-  setPull: PropTypes.func.isRequired
+  setPull: PropTypes.func.isRequired,
+  display: PropTypes.bool.isRequired,
+  setDisplay: PropTypes.func.isRequired
 };
 
 export default NavBar

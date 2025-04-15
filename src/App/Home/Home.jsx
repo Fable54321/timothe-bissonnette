@@ -4,15 +4,17 @@ import styles from './Home.module.css'
 import cloud from '../../assets/images/cloud.png'
 import vscode from '../../assets/images/vscode-alt.png'
 import lowPrice from '../../assets/images/low-price.png'
+import { useEffect, useState } from "react"
 
 
-const Home = ({ pull, setPull }) => {
+const Home = ({ pull, setPull, display, setDisplay }) => {
 
   
+ 
 
   return (
     <>
-      <NavBar pull={pull} setPull={setPull} />
+      <NavBar pull={pull} setPull={setPull} scrollY={scrollY} display={display} setDisplay={setDisplay} />
       <main className={styles["home"]}>
       <div className={styles["home__section--wrapper"]}>
            <h2 className={styles["home__section__title"]}>Service à la hauteur de vos besoins</h2>
@@ -40,9 +42,12 @@ const Home = ({ pull, setPull }) => {
   );
  
 }
+
 Home.propTypes = {
   pull: PropTypes.bool.isRequired,
   setPull: PropTypes.func.isRequired,
+  display: PropTypes.bool.isRequired,
+  setDisplay: PropTypes.func.isRequired
 }
 
 export default Home
