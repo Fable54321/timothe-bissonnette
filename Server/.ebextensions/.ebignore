@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# Negate ignore for the server directory
+!Server/
