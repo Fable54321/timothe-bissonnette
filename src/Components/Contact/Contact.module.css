@@ -3,12 +3,30 @@
 /* spacing */
 /* queries */
 .contact {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+@media (min-width: 62.5em) {
+  .contact {
+    position: absolute;
+    right: 9%;
+    top: 200%;
+    z-index: 2000;
+    background-color: hsl(212, 100%, 10%);
+    border: 2px solid #efc52e;
+    border-top: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-bottom: 1rem;
+    animation: openWide 1000ms ease-in-out forwards;
+    display: block;
+  }
+  .contact--shut {
+    display: none;
+  }
 }
 .contact__form {
   display: flex;
@@ -17,6 +35,11 @@
   gap: 2rem;
   font-family: "Lora", sans-serif;
   width: 100%;
+}
+@media (min-width: 62.5em) {
+  .contact__form {
+    animation: scaleUp 1000ms ease-in-out forwards;
+  }
 }
 .contact__form--group {
   display: flex;
@@ -49,4 +72,21 @@
   border-radius: 0.5rem;
   background-color: transparent;
   box-shadow: 1px 1px 1px white;
+}
+@keyframes openWide {
+  0% {
+    transform: scaleX(5%);
+    border: none;
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }/*# sourceMappingURL=Contact.module.css.map */

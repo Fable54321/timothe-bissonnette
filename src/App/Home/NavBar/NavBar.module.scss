@@ -18,37 +18,45 @@
   border: 1px solid $clr-accent-ylw;
   border-top: none;
   border-bottom: none;
+
+  @media(min-width:$brealkpoint){
+    width: 100%;
+    justify-content: space-between;
+    border-bottom-left-radius: $sz-100;
+    border-bottom-right-radius: $sz-100;
+    border: 3px solid $clr-accent-ylw;
+    border-top: none;
+    border-bottom: none;
+    padding-left: $sz-100;
+  }
   
   &__title {
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    font-family: $ff-primary;
-    font-size: $sz-200;
+    display: none;
+
+    @media(min-width: $brealkpoint){
+      display: block;
+      position: absolute;
     left: 50%;
-    top: 18%;
-    transform: translate(-50%, -50%);
-    -webkit-text-stroke: 1px $clr-neutral-1000;
-    -moz-text-stroke: 1px $clr-neutral-1000;
-    z-index: 1000;
-    text-shadow: 2px 2px 2px $clr-neutral-1000;
-   
-  }
-  &__slogan {
-    position: absolute;
+    top: 50%;
     text-align: center;
-    font-weight: bold;
-    font-family: $ff-primary;
-    font-size: $sz-150;
-    left: 50%;
-    top: 100%;
+    
+    font-family: $ff-tertiary;
+    font-size: $sz-340;
     transform: translate(-50%, -50%);
-    z-index: 1000;
-    width: min(100%, 410px);
-    color: #fff; // Base text color
-    text-shadow: 2px -2px 2px $clr-neutral-1000;
- 
+    
+
+    span {
+      text-shadow: 
+      $clr-neutral-200 0px 0px 20px, $clr-neutral-200 0px 0px 20px, 
+      $clr-neutral-200 0px -2px 20px, $clr-neutral-200 0px 2px 20px,
+      $clr-neutral-200 0px -2px 40px, $clr-neutral-200 0px 2px 40px;
+      font-family: $ff-tertiary;
+      font-size: $sz-380;
+      color: $clr-neutral-1000;
     }
+    }
+  }
+ 
 
   &__logo--wrapper {
     width: 40%;
@@ -67,6 +75,16 @@
       opacity: 0;
       animation: opacity 500ms ease-in-out forwards 2s;
     }
+
+    @media(min-width:$brealkpoint){
+      width: 128px;
+      
+
+      &::before {
+        width: 50px;
+        left: $sz-430;
+      }
+    }
   }  
 
 
@@ -84,7 +102,7 @@
   }
 
   &__menu--button {
-    width: 12%;
+    width: 40px;
     object-fit: contain;
     background-color: transparent;
     border: none;
@@ -94,13 +112,17 @@
     top: 61%;
     transform: translateY(-50%);
     opacity: 0;
-    transition: opacity 0.5s ease-in-out 700ms;
+    transition: opacity 0.5s ease-in-out 700ms ;
+
+   @media(min-width:$brealkpoint){
+    display: none !important;
+   }
     
   }
 
 
   &__menu--button--fixed {
-    width: 12%;
+    width: 40px;
     object-fit: contain;
     background-color: transparent;
     border: none;
@@ -109,8 +131,14 @@
     right: 2%;
     top: 16%;
     transform: translateY(-50%);
-    opacity: 1;
+    opacity: 1; 
     animation: opacity 0.9s ease-in-out;
+    
+
+    @media(min-width:$brealkpoint){
+      display: none !important;
+     }
+   
   }
 
   @keyframes rotateIn {

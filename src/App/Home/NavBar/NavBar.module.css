@@ -17,33 +17,38 @@
   border-top: none;
   border-bottom: none;
 }
-.nav-bar__title {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  font-family: "Lora", sans-serif;
-  font-size: 2rem;
-  left: 50%;
-  top: 18%;
-  transform: translate(-50%, -50%);
-  -webkit-text-stroke: 1px hsl(0, 0%, 0%);
-  -moz-text-stroke: 1px hsl(0, 0%, 0%);
-  z-index: 1000;
-  text-shadow: 2px 2px 2px hsl(0, 0%, 0%);
+@media (min-width: 62.5em) {
+  .nav-bar {
+    width: 100%;
+    justify-content: space-between;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: 3px solid #efc52e;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 1rem;
+  }
 }
-.nav-bar__slogan {
-  position: absolute;
-  text-align: center;
-  font-weight: bold;
-  font-family: "Lora", sans-serif;
-  font-size: 1.5rem;
-  left: 50%;
-  top: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  width: min(100%, 410px);
-  color: #fff;
-  text-shadow: 2px -2px 2px hsl(0, 0%, 0%);
+.nav-bar__title {
+  display: none;
+}
+@media (min-width: 62.5em) {
+  .nav-bar__title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-family: "Ruluko", sans-serif;
+    font-size: 3.4rem;
+    transform: translate(-50%, -50%);
+  }
+  .nav-bar__title span {
+    text-shadow: #EEEEFF 0px 0px 20px, #EEEEFF 0px 0px 20px, #EEEEFF 0px -2px 20px, #EEEEFF 0px 2px 20px, #EEEEFF 0px -2px 40px, #EEEEFF 0px 2px 40px;
+    font-family: "Ruluko", sans-serif;
+    font-size: 3.8rem;
+    color: hsl(0, 0%, 0%);
+  }
 }
 .nav-bar__logo--wrapper {
   width: 40%;
@@ -62,6 +67,15 @@
   opacity: 0;
   animation: opacity 500ms ease-in-out forwards 2s;
 }
+@media (min-width: 62.5em) {
+  .nav-bar__logo--wrapper {
+    width: 128px;
+  }
+  .nav-bar__logo--wrapper::before {
+    width: 50px;
+    left: 4.3rem;
+  }
+}
 .nav-bar__logo {
   width: 100%;
   border-radius: 100vw;
@@ -71,7 +85,7 @@
   transform: translate(-50%, 0%);
 }
 .nav-bar__menu--button {
-  width: 12%;
+  width: 40px;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: transparent;
@@ -84,8 +98,13 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out 700ms;
 }
+@media (min-width: 62.5em) {
+  .nav-bar__menu--button {
+    display: none !important;
+  }
+}
 .nav-bar__menu--button--fixed {
-  width: 12%;
+  width: 40px;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: transparent;
@@ -97,6 +116,11 @@
   transform: translateY(-50%);
   opacity: 1;
   animation: opacity 0.9s ease-in-out;
+}
+@media (min-width: 62.5em) {
+  .nav-bar__menu--button--fixed {
+    display: none !important;
+  }
 }
 @keyframes rotateIn {
   0% {

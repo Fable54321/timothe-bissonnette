@@ -58,5 +58,20 @@ body {
 }
 
 html, body {
+  font-size: 1em;
+}
+@media (min-width: 62.5em) {
+  html, body {
+    font-size: 1.2em;
+  }
+}
+
+html, body {
   overflow-x: hidden;
+  min-width: 100vw;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }/*# sourceMappingURL=index.css.map */

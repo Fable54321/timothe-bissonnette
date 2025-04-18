@@ -3,12 +3,32 @@
 
 
 .contact {
-    min-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    @media(min-width: $brealkpoint){
+        position: absolute;
+        right: 9%;
+        top: 200%;
+        z-index: 2000;
+        background-color: $clr-neutral-900;
+        border: 2px solid $clr-accent-ylw;
+        border-top: none;
+        border-bottom-left-radius: $sz-100;
+        border-bottom-right-radius: $sz-100;
+        padding-bottom: $sz-100;
+        animation: openWide 1000ms ease-in-out forwards;
+        display: block;
+
+        &--shut {
+            display: none;
+        }
+    }
+    
     
     &__form {
         display: flex;
@@ -17,6 +37,10 @@
         gap: $sz-200;
         font-family: $ff-primary;
         width: 100%;
+
+        @media(min-width: $brealkpoint){
+            animation: scaleUp 1000ms ease-in-out forwards;
+        }
 
         &--group {
             display: flex;
@@ -57,5 +81,25 @@
         }
     }
 
+
+    @keyframes openWide {
+        0%{
+            transform: scaleX(5%);
+            border: none;
+        }
+        100%{
+           transform: scaleX(100%);
+        }
+    }
+
+    @keyframes scaleUp {
+        0%{
+            transform: scaleX(0);
+        }
+        100%{
+            transform: scaleX(1);
+        }
+    }
    
 }
+

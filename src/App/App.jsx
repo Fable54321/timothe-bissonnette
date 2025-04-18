@@ -12,34 +12,23 @@ const [pull, setPull] = useState(false);
 
 const [display, setDisplay] = useState(true);
 
-   const [scrollY, setScrollY] = useState(0);
+
+
     
-    useEffect(() => {
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
     
-      window.addEventListener('scroll', handleScroll);
-    
-      // Cleanup the event listener on component unmount
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-  
-    useEffect(() => {
-      console.log(scrollY);
-    }, [scrollY]);
+const [mainDisplay, setMainDisplay] = useState(true);
+   
+   
 
   return (
     
-    <div>
-    <div style={{top: `${scrollY + 1}px`}} className={pull ? styles["nav-bar__dropdown"] : `${styles["nav-bar__dropdown"]} ${styles["nav-bar__dropdown--shut"]}`}>
-            <Dropdown pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} />
+    <div style={{minHeight: pull ? "fit-content" : "100vh"}}>
+    <div style={{top: `0px`}} className={pull ? `${styles["nav-bar__dropdown"]} ${styles["top--0"] }`: `${styles["nav-bar__dropdown"]} ${styles["nav-bar__dropdown--shut"]}` }>
+            <Dropdown pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} setMainDisplay={setMainDisplay} />
           </div>
-    <div className={pull ? styles["app-pull"] : styles["app"]}>
+    <div  className={pull ? styles["app-pull"] : styles["app"]}>
       <Routes>
-        <Route path="/" element={<Home pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} />}  >
+        <Route path="/" element={<Home pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} mainDisplay={mainDisplay} setMainDisplay={setMainDisplay}  />}>
           
           
         </Route>

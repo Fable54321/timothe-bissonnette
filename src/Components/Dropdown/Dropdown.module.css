@@ -18,6 +18,11 @@
   width: min(100%, 500px);
   min-height: 100vh;
 }
+@media (min-width: 62.5em) {
+  .dropdown {
+    display: none;
+  }
+}
 .dropdown--wrapper {
   min-height: 100vh;
   width: 100%;
@@ -90,7 +95,7 @@
   animation: pullUp3 2s ease-in-out forwards 0.4s;
 }
 .dropdown__list__item--4--active {
-  animation: pullUp4 2s ease-in-out forwards 0.6s;
+  animation: pullUp4 2s ease-in-out forwards 0.4s;
 }
 
 .item--off {
@@ -99,62 +104,49 @@
 
 @keyframes pullUp {
   0% {
-    transform: translateY(0);
+    top: 0;
     opacity: 1;
   }
   50% {
-    transform: translateY(-30vh);
+    top: -30vh;
+  }
+  70% {
+    opacity: 0;
   }
   100% {
-    transform: scale(0.5);
+    transform: scaleX(0.5);
     opacity: 0;
   }
 }
 @keyframes pullUp2 {
   0% {
-    transform: translateY(0);
+    top: 0;
     opacity: 1;
   }
   50% {
-    transform: translateY(-38vh);
+    top: -46vh;
   }
   70% {
     opacity: 0;
   }
   100% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-}
-@keyframes pullUp3 {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-49vh);
-  }
-  70% {
-    opacity: 0;
-  }
-  100% {
-    transform: scale(0.5);
+    transform: scaleX(0.5);
     opacity: 0;
   }
 }
 @keyframes pullUp4 {
   0% {
-    transform: translateY(0);
+    top: 0;
     opacity: 1;
   }
   50% {
-    transform: translateY(-58vh);
+    top: -60vh;
   }
   70% {
     opacity: 0;
   }
   100% {
-    transform: scale(0.5);
+    transform: scaleX(0.5);
     opacity: 0;
   }
 }

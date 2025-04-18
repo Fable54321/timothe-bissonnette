@@ -6,12 +6,18 @@
 .app {
     transform: translateX("");
     transition: all 0.8s ease-in-out;
+
+    @media(min-width: $brealkpoint){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     
 }
 
 .app-pull {
   transform: translateX(-100%);
-  transition: all 0.8s ease-in-out;
+   transition: all 0.8s ease-in-out;
 }
 
 .nav-bar__dropdown {
@@ -26,3 +32,4 @@
     
   }
 }
+

@@ -1,20 +1,28 @@
 import styles from './Dropdown.module.css'
- import { useState } from 'react'
+ import { useEffect, useState } from 'react'
 import close from '../../assets/images/close.png'
 import PropTypes from 'prop-types'
 import Contact from '../Contact/Contact'
 
-const Dropdown = ({ setPull, scrollY,setDisplay }) => {
+const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
 
-    
+ 
 
     const handleClick = () => {
+
+      if(contactOn){
+        setContactOn(false);
+        setTrigger(false);
+      }
+      else{
+      setMainDisplay(true);
 
       setTimeout(()=> {
         setDisplay(true)
       },700)
 
       setPull(false);
+    }
     }
 
     const [trigger, setTrigger] = useState(false);
@@ -25,18 +33,18 @@ const Dropdown = ({ setPull, scrollY,setDisplay }) => {
         setTrigger(true);
         setTimeout(() => {
           setContactOn(true);
-        },2000)
+        },1500)
       }
       else {
         setContactOn(false);
         setTimeout(() => {
           setTrigger(false);
-        },2000)
+        },1500)
       }
     }
 
   return (
-    <nav style={{ top: `${scrollY + 1}px` }} className={styles["dropdown"]}>
+    <nav  className={styles["dropdown"]}>
       <div className={styles["dropdown--wrapper"]}>
         <button onClick={() => handleClick()} className={styles["dropdown__close--button"]}><img src={close} alt='close' className={styles["dropdown__close"]} /></button>
         <ul className={styles["dropdown__list"]}>
@@ -53,13 +61,8 @@ const Dropdown = ({ setPull, scrollY,setDisplay }) => {
           ${styles["dropdown__list__item--2"]} 
           ${trigger ? styles["dropdown__list__item--2--active"] : ''}
           ${contactOn ? styles["item--off"] : ''}`}
-          >Services</li>
-          <li className={`
-          ${styles["dropdown__list__item"]} 
-          ${styles["dropdown__list__item--3"]} 
-          ${trigger ? styles["dropdown__list__item--3--active"] : ''}
-          ${contactOn ? styles["item--off"] : ''}`}
-          >Tarifs</li>
+          >Clients satisfaits</li>
+         
           <li onClick={()=> openContact()} className={`
           ${styles["dropdown__list__item"]} 
           ${styles["dropdown__list__item--4"]} 
@@ -79,7 +82,8 @@ Dropdown.propTypes ={
   setPull: PropTypes.func,
   scrollY: PropTypes.number,
   display: PropTypes.bool,
-  setDisplay: PropTypes.func
+  setDisplay: PropTypes.func,
+  setMainDisplay: PropTypes.func
 }
 
 export default Dropdown

@@ -15,6 +15,7 @@ body {
     background-color: $clr-neutral-700;
     z-index: -1000000;
     position: relative;
+
 }
 
 .display-none {
@@ -22,7 +23,27 @@ body {
 }
 
 
+
+
 html, body {
     
+    
+
+    font-size: 1em;
+
+    @media(min-width: $brealkpoint){
+        font-size: 1.2em;
+    }
+}
+
+
+html,body {
     overflow-x: hidden;
+    min-width: 100vw;
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
 }

@@ -1,7 +1,8 @@
 import styles from './Contact.module.css'
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
-const Contact = () => {
+const Contact = ({ contactDesktop }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -31,7 +32,7 @@ const Contact = () => {
 
   const handleFilesChange = (e) => {
     setFiles(e.target.files)
-    validateFiles(e.target.files)
+    
   }
 
   const validateName = (name) => {
@@ -65,7 +66,7 @@ const Contact = () => {
   }
 
   const validatePhone = (phone) => {
-    const regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{4,6}$/
+    const regex = /^[+]?[(]?[0-9]{3}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{4,6}$/
     if (!regex.test(phone)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
@@ -98,16 +99,47 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (Object.values(errors).every((error) => error === '')) {
-      // Send the form data to the server
-      console.log('Form data is valid and will be sent to the server.')
-    } else {
-      console.log('Form data is invalid.')
+
+    if (errors.name || errors.email || errors.phone || errors.message) {
+      return
+    }
+    else{
+      const formData = new FormData()
+      formData.append('name', name)
+      formData.append('email', email)
+      formData.append('phone', phone)
+      formData.append('message', message)
+      for (let i = 0; i < files.length; i++) {
+        formData.append('files', files[i])
+      }
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert('Message envoyé avec succès !')
+          setName('')
+          setEmail('')
+          setPhone('')
+          setMessage('')
+          setFiles([])
+        } else {
+          alert('Une erreur s’est produite lors de l’envoi du message.')
+        }
+      })
     }
   }
 
   return (
-    <section className={styles["contact"]}>
+    <section
+    
+     className={`
+      ${styles["contact"]}
+      ${!contactDesktop ? styles["contact--shut"] : ""}
+    `}>
       <form className={styles["contact__form"]} onSubmit={handleSubmit}>
         <div className={styles["contact__form--group"]}>
           <label htmlFor="name">Nom *</label>
@@ -183,6 +215,10 @@ const Contact = () => {
       </form>
     </section>
   )
+}
+
+Contact.propTypes = {
+ contactDesktop: PropTypes.bool.isRequired,
 }
 
 export default Contact
