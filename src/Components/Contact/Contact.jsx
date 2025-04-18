@@ -113,7 +113,7 @@ const Contact = ({ contactDesktop }) => {
         formData.append('files', files[i])
       }
 
-      fetch('https://api.web3forms.com/submit', {
+      fetch('https://backend.tb-technologies.ca/send-email', {
         method: 'POST',
         body: formData
       })
