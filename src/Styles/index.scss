@@ -38,8 +38,9 @@ html, body {
 
 
 html,body {
-    overflow-x: hidden;
-    min-width: 100vw;
+   overflow-x: hidden;
+    min-width: 100%;
+    
 }
 
 
@@ -47,3 +48,5 @@ button {
     border: none;
     background-color: transparent;
 }
+
+

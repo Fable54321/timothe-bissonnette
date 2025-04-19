@@ -1,3 +1,4 @@
+import ConfirmationMobile from '../ConfirmationMobile/ConfirmationMobile'
 import styles from './ContactMobile.module.css'
 import { useState } from 'react'
 
@@ -9,7 +10,7 @@ const ContactMobile = () => {
   const [message, setMessage] = useState('')
   const [files, setFiles] = useState([])
   const [errors, setErrors] = useState({})
- 
+ const [confirmed, setConfirmed] = useState(false);
   
  
 
@@ -49,7 +50,7 @@ const ContactMobile = () => {
 
   const validateName = (name) => {
     const regex = /^[a-zA-ZÀ-ÿ -]{2,45}$/
-    if (!regex.test(name)) {
+    if (name === '' || !regex.test(name)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         name: 'Entrez un nom valide',
@@ -64,7 +65,7 @@ const ContactMobile = () => {
 
   const validateEmail = (email) => {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-    if (!regex.test(email)) {
+    if (email === "" || !regex.test(email)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         email: 'L\'adresse email est invalide.',
@@ -79,7 +80,7 @@ const ContactMobile = () => {
 
   const validatePhone = (phone) => {
     const regex = /^[+]?[(]?[0-9]{3}[)]?[-\s]?[0-9]{3}[-\s]?[0-9]{4,6}$/
-    if (!regex.test(phone)) {
+    if ( !regex.test(phone)) {
       setErrors((prevErrors) => ({
         ...prevErrors,
         phone: 'Le numéro de téléphone est invalide.',
@@ -115,8 +116,12 @@ const ContactMobile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    validateEmail(email)
+    validateName(name)
+    validatePhone(phone)
+    validateMessage(message)
 
-    if (errors.name || errors.email || errors.phone || errors.message) {
+    if (errors.name || errors.email || errors.phone || errors.message || name === '' || email === '' || phone === '' || message === '') {
       return
     }
     else{
@@ -141,10 +146,11 @@ const ContactMobile = () => {
 
       setName("");
       setEmail("");
+      setPhone("");
       setMessage("");
       setFiles([]);
       setErrors({});
-      
+      setConfirmed(true);
     }
   }
 
@@ -156,6 +162,9 @@ const ContactMobile = () => {
      
     `}>
       <form className={styles["contact__form"]} onSubmit={handleSubmit}>
+         <div style = {{display : confirmed ? "block" : "none"}}>
+              <ConfirmationMobile setConfirmed={setConfirmed} />
+          </div>
         <div className={styles["contact__form--group"]}>
           <label htmlFor="name">Nom *</label>
           <input
@@ -164,7 +173,7 @@ const ContactMobile = () => {
             value={name}
             onChange={handleNameChange}
             placeholder="Votre nom"
-            required
+            
             className={styles["contact__form--input"]}
           />
           {errors.name && <p className={styles["contact__error"]}>{errors.name}</p>}
@@ -178,7 +187,7 @@ const ContactMobile = () => {
             value={email}
             onChange={handleEmailChange}
             placeholder="Votre adresse email"
-            required
+            
             className={styles["contact__form--input"]}
           />
           {errors.email && <p className={styles["contact__error"]}>{errors.email}</p>}
@@ -206,7 +215,7 @@ const ContactMobile = () => {
             value={message}
             onChange={handleMessageChange}
             placeholder="Votre message"
-            required
+            
           />
           {errors.message && <p className={styles["contact__error"]}>{errors.message}</p>}
         </div>

@@ -6,21 +6,18 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin: auto auto;
   width: min(100%, 500px);
-  
   background-color: rgba($clr-neutral-1000,0.6);
-  
-  position: relative;
   padding-block: $sz-200;
   border-bottom-left-radius: $sz-200;
   border-bottom-right-radius: $sz-200;
   border: 1px solid $clr-accent-ylw;
   border-top: none;
   border-bottom: none;
-
+  position: relative;
   @media(min-width:$brealkpoint){
-    width: 100%;
+    width: 99%;
+    
     justify-content: space-between;
     border-bottom-left-radius: $sz-100;
     border-bottom-right-radius: $sz-100;
@@ -101,45 +98,7 @@
     
   }
 
-  &__menu--button {
-    width: 40px;
-    object-fit: contain;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    z-index: 1000;
-    right: 2%;
-    top: 61%;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out 700ms ;
 
-   @media(min-width:$brealkpoint){
-    display: none !important;
-   }
-    
-  }
-
-
-  &__menu--button--fixed {
-    width: 40px;
-    object-fit: contain;
-    background-color: transparent;
-    border: none;
-    position: fixed;
-    z-index: 1000;
-    right: 2%;
-    top: 16%;
-    transform: translateY(-50%);
-    opacity: 1; 
-    animation: opacity 0.9s ease-in-out;
-    
-
-    @media(min-width:$brealkpoint){
-      display: none !important;
-     }
-   
-  }
 
   @keyframes rotateIn {
     0% {

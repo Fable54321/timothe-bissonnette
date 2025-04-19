@@ -68,7 +68,7 @@ html, body {
 
 html, body {
   overflow-x: hidden;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 button {

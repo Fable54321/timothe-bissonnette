@@ -3,8 +3,9 @@
 /* spacing */
 /* queries */
 .app {
-  transform: translateX("");
+  transform: translateX(0);
   transition: all 0.8s ease-in-out;
+  width: 100%;
 }
 @media (min-width: 62.5em) {
   .app {
@@ -23,8 +24,61 @@
   transform: translateX(0);
   transition: all 0.8s ease-in-out;
   position: relative;
+  top: 2px;
+}
+@media (min-width: 62.5em) {
+  .nav-bar__dropdown {
+    display: none !important;
+  }
 }
 .nav-bar__dropdown--shut {
   transform: translateX(100vw);
   transition: all 0.8s ease-in-out;
+}
+@media (min-width: 62.5em) {
+  .nav-bar__dropdown--shut {
+    display: none !important;
+  }
+}
+
+.no-display {
+  display: none !important;
+}
+
+.menu--button {
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  z-index: 3000;
+  right: 2%;
+  top: 61%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 700ms;
+}
+@media (min-width: 62.5em) {
+  .menu--button {
+    display: none !important;
+  }
+}
+
+.menu--button--fixed {
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  z-index: 3000;
+  right: 2%;
+  top: 5%;
+  opacity: 1;
+  animation: opacity 0.9s ease-in-out;
+}
+@media (min-width: 62.5em) {
+  .menu--button--fixed {
+    display: none !important;
+  }
 }/*# sourceMappingURL=App.module.css.map */

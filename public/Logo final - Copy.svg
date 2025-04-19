@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="135.57857mm"
+   height="135.57899mm"
+   viewBox="0 0 135.57857 135.57899"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="D:\WEB DEV\Portfolio\Final portfolio\my-portfolio\src\assets\images\logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="Logo final.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.72604517"
+     inkscape:cx="163.21299"
+     inkscape:cy="178.36356"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-30080"
+     inkscape:window-y="-31999"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-38.263817,-76.163231)">
+    <ellipse
+       style="fill:#f0f0ff;stroke-width:0.304785;fill-opacity:0.99607843"
+       id="path1"
+       cx="106.0531"
+       cy="143.95273"
+       rx="67.789284"
+       ry="67.789497" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.5198px;font-family:'OCR A Std';-inkscape-font-specification:'OCR A Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:-3.28019px;word-spacing:-1.00886px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#008093;fill-opacity:0.941176;stroke-width:0.356493"
+       x="122.39094"
+       y="137.22658"
+       id="text3"
+       transform="scale(0.86641006,1.1541879)"
+       inkscape:label="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.5198px;font-family:'OCR A Std';-inkscape-font-specification:'OCR A Std, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-3.28019px;fill:#008093;fill-opacity:0.941176;stroke-width:0.356493"
+         x="120.75085"
+         y="137.22658">&lt;/&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.5119px;font-family:Ruluko;-inkscape-font-specification:'Ruluko, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:-1.2405px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:0.941176;stroke-width:0.438337"
+       x="106.9882"
+       y="166.34872"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.5119px;font-family:Ruluko;-inkscape-font-specification:'Ruluko, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.438337"
+         x="106.9882"
+         y="166.34872">tb</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.1667px;font-family:Ruluko;-inkscape-font-specification:'Ruluko, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:-0.748771px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:0.941176;stroke-width:0.264583"
+       x="105.98959"
+       y="185.48839"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.1667px;font-family:Ruluko;-inkscape-font-specification:'Ruluko, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="105.98959"
+         y="185.48839">technologies</tspan></text>
+    <ellipse
+       style="fill:#008093;fill-opacity:0.941176;stroke-width:0.264583"
+       id="path3"
+       cx="141.05223"
+       cy="172.20993"
+       rx="1.0704755"
+       ry="1.2071319"
+       inkscape:label="path3" />
+    <path
+       style="fill:#0e8699;fill-opacity:1;stroke-width:0.264583"
+       id="path6"
+       d="m 107.64684,198.20622 c 2.69778,-0.46564 5.36685,-1.09913 8.01187,-1.80164 1.37836,-0.36608 2.77567,-0.67682 4.12079,-1.15069 1.08193,-0.38114 2.09358,-0.93822 3.14038,-1.40733 0.97702,-0.45527 1.95404,-0.91055 2.93107,-1.36583 0,0 -0.084,-0.0104 -0.084,-0.0104 v 0 c -1.44046,0.39589 -2.88092,0.79177 -4.32138,1.18766 -1.71225,0.38018 -3.43201,0.72799 -5.13674,1.14054 -1.41669,0.34283 -2.81079,0.77424 -4.2255,1.12512 -2.81447,0.69806 -5.68253,1.35118 -8.5739,1.62727 z" />
+  </g>
+</svg>

@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 1rem;
 }
 .contact__form {
   display: flex;
@@ -16,6 +17,7 @@
   gap: 2rem;
   font-family: "Lora", sans-serif;
   width: 100%;
+  position: relative;
 }
 .contact__form--group {
   display: flex;
@@ -45,6 +47,10 @@
   border-radius: 0.5rem;
   box-shadow: 1px 1px 1px white;
 }
+.contact__form--files:active {
+  transform: scale(0.9);
+  top: 1px;
+}
 .contact__form__submit-button {
   border: 1px solid hsl(188, 83%, 33%);
   padding: 5px;
@@ -52,9 +58,14 @@
   background-color: transparent;
   box-shadow: 1px 1px 1px white;
 }
+.contact__form__submit-button:active {
+  transform: scale(0.9);
+  top: 1px;
+}
 .contact__error {
   position: relative;
   color: hsl(2, 97%, 52%);
+  font-weight: bold;
   text-align: center;
   font-size: 0.9rem;
   margin-top: -0.5rem;

@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
+    margin-top: $sz-100;
    
     
     
@@ -20,7 +20,7 @@
         gap: $sz-200;
         font-family: $ff-primary;
         width: 100%;
-
+        position: relative;
       
 
         &--group {
@@ -54,6 +54,11 @@
             padding: 5px;
             border-radius: $sz-050;
             box-shadow: 1px 1px 1px white;
+
+            &:active {
+                transform: scale(0.9);
+                top: 1px;
+            }
         }
 
         &__submit-button {
@@ -62,12 +67,18 @@
             border-radius: $sz-050;
             background-color: transparent;
             box-shadow: 1px 1px 1px white;
+
+            &:active {
+                transform: scale(0.9);
+                top: 1px;
+            }
         }
     }
     
     &__error {
        position:relative;
        color: $clr-accent-red;
+       font-weight: bold;
        text-align: center;
        font-size: $sz-090;
        margin-top: -$sz-050;

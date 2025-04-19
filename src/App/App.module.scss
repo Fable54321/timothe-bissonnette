@@ -4,15 +4,18 @@
 
 
 .app {
-    transform: translateX("");
+    transform: translateX(0);
     transition: all 0.8s ease-in-out;
-
+  width: 100%;
     @media(min-width: $brealkpoint){
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     
+   
+
+   
 }
 
 .app-pull {
@@ -24,12 +27,69 @@
  transform: translateX(0);
  transition: all 0.8s ease-in-out;
  position: relative;
+  top: 2px;
+ @media(min-width: $brealkpoint){
+  display: none !important;
+ }
 
   &--shut {
     transform: translateX(100vw);
    
     transition: all 0.8s ease-in-out;
+
+    @media(min-width: $brealkpoint){
+      display: none !important;
+    }
     
   }
+}
+
+.no-display {
+  display: none !important;
+}
+
+
+.menu--button {
+  width: 40px;
+  object-fit: contain;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  z-index: 3000;
+  right: 2%;
+  top: 61%;
+  // transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 700ms ;
+
+  
+
+ @media(min-width:$brealkpoint){
+  display: none !important;
+ }
+  
+}
+
+
+.menu--button--fixed {
+  width: 40px;
+  object-fit: contain;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  z-index: 3000;
+   right: 2%;
+   top: 5%;
+  // transform: translateY(-50%);
+  opacity: 1; 
+  animation: opacity 0.9s ease-in-out;
+  
+
+
+
+  @media(min-width:$brealkpoint){
+    display: none !important;
+   }
+ 
 }
 

@@ -15,8 +15,9 @@ const Home = ({ pull, setPull, display, setDisplay, mainDisplay ,setMainDisplay 
  
 
   return (
-    <div style={{display: mainDisplay ? "block" : "none"}} >
+    <div className={styles["home--wrapper"]} style={{display: mainDisplay ? "flex" : "none"}} >
       <NavBar  pull={pull} setPull={setPull} scrollY={scrollY} display={display} setDisplay={setDisplay} setMainDisplay={setMainDisplay}  />
+      
       <main className={styles["home"]}>
       <div className={`${styles["home__section--wrapper"]} ${styles["home__section--wrapper--1"]}`}>
            <h2 className={styles["home__section__title"]}>Service à la hauteur de vos besoins</h2>
@@ -59,7 +60,9 @@ Home.propTypes = {
   pull: PropTypes.bool.isRequired,
   setPull: PropTypes.func.isRequired,
   display: PropTypes.bool.isRequired,
-  setDisplay: PropTypes.func.isRequired
+  setDisplay: PropTypes.func.isRequired,
+  mainDisplay: PropTypes.bool.isRequired,
+  setMainDisplay: PropTypes.func.isRequired
 }
 
 export default Home

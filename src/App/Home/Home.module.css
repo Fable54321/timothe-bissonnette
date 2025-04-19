@@ -8,6 +8,12 @@
   align-items: center;
   min-height: 100vh;
 }
+.home--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
 @media (min-width: 62.5em) {
   .home {
     display: grid;
@@ -53,8 +59,10 @@
     width: 100%;
     height: 100%;
     border: 1px solid #efc52e;
+    margin-top: -2rem;
     border-top: none;
     position: relative;
+    font-size: 1rem;
   }
   .home__section--wrapper--1 {
     border-left: none;
