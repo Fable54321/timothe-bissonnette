@@ -1,0 +1,44 @@
+/* colors */
+/*typography */
+/* spacing */
+/* queries */
+.confirmation {
+  position: absolute;
+  background: #00397A;
+  background: linear-gradient(180deg, rgba(0, 57, 122, 0.66) 0%, rgba(0, 57, 122, 0.84) 14%, rgb(0, 57, 122) 31%, rgb(0, 57, 122) 69%, rgba(0, 57, 122, 0.84) 86%, rgba(0, 57, 122, 0.67) 100%);
+  left: 50%;
+  width: 85%;
+  border-radius: 2rem;
+  border: #efc52e 2px solid;
+  aspect-ratio: 1/1;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: comeDown 1000ms ease-in-out forwards;
+}
+.confirmation__title {
+  width: 70%;
+  font-size: 2.5rem;
+  font-family: "Lora", sans-serif;
+}
+.confirmation__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.confirmation__close:hover {
+  cursor: pointer;
+}
+@keyframes comeDown {
+  from {
+    top: -20%;
+    opacity: 0;
+  }
+  to {
+    top: 45%;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Confirmation.module.css.map */

@@ -1,0 +1,53 @@
+@use '../../Styles/Abstracts/variables' as *;
+
+
+
+.confirmation {
+    position: absolute;
+    background: #00397A;
+    background: linear-gradient(180deg,rgba(0, 57, 122, 0.66) 0%, rgba(0, 57, 122, 0.84) 14%, rgba(0, 57, 122, 1) 31%, rgba(0, 57, 122, 1) 69%, rgba(0, 57, 122, 0.84) 86%, rgba(0, 57, 122, 0.67) 100%);
+    left: 50%;
+;
+    width: 85%;
+    border-radius: $sz-200;
+    border: $clr-accent-ylw 2px solid;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: comeDown 1000ms ease-in-out forwards;
+
+
+    &__title {
+        width: 70%;
+        font-size: $sz-250;
+        font-family: $ff-primary;
+    }
+
+    &__close {
+        position: absolute;
+        top: $sz-100;
+        right: $sz-100;
+
+        &:hover {
+            cursor: pointer;
+        }
+        
+    }
+
+
+    @keyframes comeDown {
+        from {
+            top: -20%;
+            opacity: 0;
+        }
+        to {
+            top: 45%;
+            opacity: 1;
+        }
+    }
+   
+}

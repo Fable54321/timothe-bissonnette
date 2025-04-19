@@ -1,4 +1,4 @@
-@use '../../Styles/Abstracts/variables' as *;
+@use "../../Styles/Abstracts/variables" as *;
 
 
 
@@ -9,25 +9,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    
-    
-        position: absolute;
-        right: 9%;
-        top: 170%;
-        z-index: 2000;
-        background-color: $clr-neutral-900;
-        border: 2px solid $clr-accent-ylw;
-        border-top: none;
-        border-bottom-left-radius: $sz-100;
-        border-bottom-right-radius: $sz-100;
-        padding-bottom: $sz-100;
-        animation: openWide 1000ms ease-in-out forwards;
-        display: block;
 
-        &--shut {
-            display: none;
-        }
-    
+   
     
     
     &__form {
@@ -37,10 +20,8 @@
         gap: $sz-200;
         font-family: $ff-primary;
         width: 100%;
-        position: relative;
+
       
-        animation: scaleUp 1000ms ease-in-out forwards;
-        
 
         &--group {
             display: flex;
@@ -48,12 +29,14 @@
             align-items: center;
             gap: $sz-100;
             width: 100%;
+            position: relative;
         }
 
         &--input {
             width: 65%;
             border-radius: $sz-050;
             padding-top: $sz-020;
+            position: relative;
         }
 
 
@@ -63,6 +46,7 @@
             border-radius: $sz-150;
             padding-left: $sz-060;
             padding-top: $sz-020;
+            position: relative;
         }
 
         &--files {
@@ -80,37 +64,14 @@
             box-shadow: 1px 1px 1px white;
         }
     }
-
+    
     &__error {
-        position:relative;
-         color: $clr-accent-red;
-         font-weight: bold;
-        text-align: center;
-        font-size: $sz-090;
-        margin-top: -$sz-050;
-     }
-
-
-    @keyframes openWide {
-        0%{
-            transform: scaleX(5%);
-            border: none;
-        }
-        100%{
-           transform: scaleX(100%);
-        }
+       position:relative;
+       color: $clr-accent-red;
+       text-align: center;
+       font-size: $sz-090;
+       margin-top: -$sz-050;
     }
-
-    @keyframes scaleUp {
-        0%{
-            transform: scaleX(0);
-        }
-        100%{
-            transform: scaleX(1);
-        }
-    }
-
-
    
 }
 

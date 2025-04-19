@@ -1,18 +1,17 @@
-import styles from './Contact.module.css'
+import styles from './ContactMobile.module.css'
 import { useState } from 'react'
-import PropTypes from 'prop-types'
-import Confirmation from '../Confirmation/Confirmation'
 
-const Contact = ({ contactDesktop = false }) => {
+
+const ContactMobile = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [files, setFiles] = useState([])
   const [errors, setErrors] = useState({})
-  const [confirmed, setConfirmed] = useState(false);
+ 
   
- console.log("rendering Contact component", files.length);
+ 
 
 
  
@@ -94,11 +93,15 @@ const Contact = ({ contactDesktop = false }) => {
   }
 
   const validateMessage = (message) => {
-    const regex = /^[\s\S]{10,500}$/
-    if (!regex.test(message)) {
+    if (message.length < 10) {
       setErrors((prevErrors) => ({
         ...prevErrors,
-        message: 'Le message doit contenir entre 10 et 500 caractères.',
+        message: 'Le message doit contenir au moins 10 caractères.',
+      }))
+    } else if (message.length > 500) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        message: 'Le message ne doit pas contenir plus de 500 caractères.',
       }))
     } else {
       setErrors((prevErrors) => ({
@@ -139,30 +142,20 @@ const Contact = ({ contactDesktop = false }) => {
       setName("");
       setEmail("");
       setMessage("");
-      setPhone("");
       setFiles([]);
       setErrors({});
-      setConfirmed(true);
+      
     }
   }
 
   return (
-    <>
-   
     <section
     
      className={`
       ${styles["contact"]}
-      ${!contactDesktop ? styles["contact--shut"] : ""}
+     
     `}>
-
-    
-
       <form className={styles["contact__form"]} onSubmit={handleSubmit}>
-      <div style = {{display : confirmed ? "block" : "none"}}>
-      <Confirmation setConfirmed={setConfirmed} />
-    </div>
-
         <div className={styles["contact__form--group"]}>
           <label htmlFor="name">Nom *</label>
           <input
@@ -240,15 +233,11 @@ const Contact = ({ contactDesktop = false }) => {
         </button>
       </form>
     </section>
-    </>
   )
 }
   
-  Contact.propTypes = {
-    contactDesktop: PropTypes.bool,
-   }
+  
 
 
 
-export default Contact
-
+export default ContactMobile

@@ -81,7 +81,7 @@
   margin-left: calc(-20px + 4 * 5px);
 }
 .dropdown__contact {
-  animation: showUp 1s ease-in-out forwards;
+  animation: showUp 700ms ease-in-out forwards;
   width: 100%;
 }
 

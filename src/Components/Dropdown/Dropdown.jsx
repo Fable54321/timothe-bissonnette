@@ -1,8 +1,9 @@
 import styles from './Dropdown.module.css'
- import { useEffect, useState } from 'react'
+ import { useState } from 'react'
 import close from '../../assets/images/close.png'
 import PropTypes from 'prop-types'
-import Contact from '../Contact/Contact'
+
+import ContactMobile from '../ContactMobile/ContactMobile'
 
 const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
 
@@ -71,7 +72,7 @@ const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
           >Contact</li>
         </ul>
         <div style ={{display: contactOn ? 'block' : 'none'}} className={styles["dropdown__contact"]}>
-          <Contact />
+          <ContactMobile />
         </div>
       </div>
     </nav>

@@ -48,7 +48,7 @@ p {
 }
 
 body {
-  background-color: hsl(212, 100%, 24%);
+  background-color: #00397a;
   z-index: -1000000;
   position: relative;
 }
