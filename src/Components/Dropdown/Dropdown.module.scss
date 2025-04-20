@@ -64,6 +64,13 @@
             padding-left: $sz-100;
             position: relative;
 
+            &__link {
+                text-decoration: none;
+                color: $clr-neutral-200;
+                position: relative;
+                z-index: 1001;
+            }
+
             &::before {
                 content: '';
                 position: absolute;
@@ -137,9 +144,11 @@
     }
     20% {
         top: -26vh;
+        
     }
     50% {
         transform: scaleX(0.0);
+        transform-origin: left;
     }
     95% {
         opacity: 0;
@@ -149,6 +158,8 @@
         opacity: 0;
         top: -26vh;
         transform: scaleX(0.0);
+        transform-origin: left;
+        
     }
 }
 
@@ -162,6 +173,7 @@
     }
     50% {
         transform: scaleX(0.0);
+        transform-origin: left;
     }
     98% {
         opacity: 0;
@@ -171,6 +183,7 @@
         opacity: 0;
         top: -40vh;
         transform: scaleX(0.0);
+        transform-origin: left;
     }
 }
 
@@ -184,11 +197,13 @@
     }
     50% {
         transform: scaleX(0.0);
+        transform-origin: left;
     }
     100% {
         opacity: 0;
         top: -56vh;
         transform: scaleX(0.0);
+        transform-origin: left;
     }
 }
 

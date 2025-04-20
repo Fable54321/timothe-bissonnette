@@ -5,6 +5,7 @@ import Home from './Home/Home'
 import Dropdown from '../Components/Dropdown/Dropdown';
 import { useMediaQuery } from 'react-responsive';
 import menu from '../../src/assets/images/menu.png'
+import Clients from './Pages/Clients/Clients';
 
 
 function App() {
@@ -79,7 +80,7 @@ const handleClick = () => {
     <div  className={  pull && isMobile ? styles["app-pull"] : styles["app"]}>
       <Routes>
         <Route path="/" element={<Home pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} mainDisplay={mainDisplay} setMainDisplay={setMainDisplay}  />}>
-          
+        <Route path="/clients" element={<Clients />} />
           
         </Route>
       </Routes>

@@ -4,6 +4,7 @@ import close from '../../assets/images/close.png'
 import PropTypes from 'prop-types'
 
 import ContactMobile from '../ContactMobile/ContactMobile'
+import { Link } from 'react-router-dom'
 
 const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
 
@@ -62,7 +63,7 @@ const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
           ${styles["dropdown__list__item--2"]} 
           ${trigger ? styles["dropdown__list__item--2--active"] : ''}
           ${contactOn ? styles["item--off"] : ''}`}
-          >Clients satisfaits</li>
+          ><Link className={styles["dropdown__list__item__link"]} to = "/clients">Clients satisfaits</Link></li>
          
           <li onClick={()=> openContact()} className={`
           ${styles["dropdown__list__item"]} 

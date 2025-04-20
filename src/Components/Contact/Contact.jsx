@@ -41,6 +41,19 @@ const Contact = ({ contactDesktop = false }) => {
   const handleFilesChange = (e) => {
     
     const selectedFiles = Array.from(e.target.files);
+
+    const totalSize = selectedFiles.reduce((total, file) => total + file.size, 0);
+
+    if (totalSize > 10000000) {
+      alert("La taille totale des fichiers ne doit pas dépasser 10Mo.");
+      return;
+    }
+
+    if(selectedFiles.length > 5){
+      alert("Vous ne pouvez pas uploader plus de 5 fichiers.");
+      return;
+    }
+
     setFiles(selectedFiles);
   
     
@@ -233,7 +246,7 @@ const Contact = ({ contactDesktop = false }) => {
           {errors.files && <p className={styles["contact__error"]}>{errors.files}</p>}
         </div>
         
-          <p style={{display: "block"}} >Fichiers joindre : {files.length}</p>
+          <p style={{display: "block"}} >Fichiers joints : {files.length}</p>
         
         <button type="submit" className={styles["contact__form__submit-button"]}>
           Envoyer
