@@ -12,7 +12,7 @@ const Contact = ({ contactDesktop = false }) => {
   const [errors, setErrors] = useState({})
   const [confirmed, setConfirmed] = useState(false);
   
- console.log("rendering Contact component", files.length);
+ 
 
 
  
@@ -113,7 +113,7 @@ const Contact = ({ contactDesktop = false }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (errors.name || errors.email || errors.phone || errors.message) {
+    if (errors.name || errors.email || errors.phone || errors.message || name === '' || email === '' || phone === '' || message === '') {
       return
     }
     else{

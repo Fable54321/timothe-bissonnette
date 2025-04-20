@@ -102,23 +102,23 @@
 
         &--1 {
             &--active {
-                animation: pullUp 2s ease-in-out forwards;
+                animation: pullUp 1800ms ease-in-out forwards;
             }
         }
 
         &--2 {
             &--active {
-                animation: pullUp2 2s ease-in-out forwards 0.2s;
+                animation: pullUp2 1800ms ease-in-out forwards 300ms;
             }}
 
-        &--3 {
-            &--active {
-                animation: pullUp3 2s ease-in-out forwards 0.4s;
-            }
-        }
+        // &--3 {
+        //     &--active {
+        //         animation: pullUp3 2s ease-in-out forwards 0.4s;
+        //     }
+        // }
         &--4 {
             &--active {
-                animation: pullUp4 2s ease-in-out forwards 0.4s;
+                animation: pullUp4 1800ms ease-in-out forwards 600ms;
             }
         }
     }
@@ -130,21 +130,25 @@
 
 
 
-
 @keyframes pullUp {
     0% {
         top: 0;
         opacity: 1;
     }
-    50% {
-        top: -30vh;
+    20% {
+        top: -26vh;
     }
-    70% {
+    50% {
+        transform: scaleX(0.0);
+    }
+    95% {
         opacity: 0;
+        top: -26vh;
     }
     100% {
-        transform: scaleX(0.5);
         opacity: 0;
+        top: -26vh;
+        transform: scaleX(0.0);
     }
 }
 
@@ -153,34 +157,38 @@
         top: 0;
         opacity: 1;
     }
-    50% {
-        top: -46vh;
+    20% {
+        top: -40vh;
     }
-    70% {
+    50% {
+        transform: scaleX(0.0);
+    }
+    98% {
         opacity: 0;
+        top: -40vh;
     }
     100% {
-        transform: scaleX(0.5);
         opacity: 0;
+        top: -40vh;
+        transform: scaleX(0.0);
     }
 }
-
-
 
 @keyframes pullUp4 {
     0% {
         top: 0;
         opacity: 1;
     }
-    50% {
-        top: -60vh;
+    20% {
+        top: -56vh;
     }
-    70% {
-        opacity: 0;
+    50% {
+        transform: scaleX(0.0);
     }
     100% {
-        transform: scaleX(0.5);
         opacity: 0;
+        top: -56vh;
+        transform: scaleX(0.0);
     }
 }
 

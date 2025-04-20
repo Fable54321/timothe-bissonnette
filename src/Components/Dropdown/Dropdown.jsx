@@ -34,13 +34,13 @@ const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
         setTrigger(true);
         setTimeout(() => {
           setContactOn(true);
-        },1500)
+        },1100)
       }
       else {
         setContactOn(false);
         setTimeout(() => {
           setTrigger(false);
-        },1500)
+        },1100)
       }
     }
 
