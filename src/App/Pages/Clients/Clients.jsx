@@ -5,21 +5,15 @@ import jb from '../../../assets/images/jb-concept--1.png'
 import alpine from '../../../assets/images/alpine.png'
 import { useMediaQuery } from 'react-responsive'
 import Animation from '../../../Components/Animation/Animation'
-import { useEffect, useState } from 'react'
+
 
 
 const Clients = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
-  const [animation, setAnimation] = useState(false);
+  
 
-  useEffect(()=> {
-    setAnimation(false);
-
-    setTimeout(()=> {
-      setAnimation(true);
-    },500)
-  },[])
+ 
 
   return (
     <section className={styles['clients']}>
@@ -27,9 +21,9 @@ const Clients = () => {
 
       <article className={`${styles['clients__banner']} ${styles['clients__banner--1']}`}>
         <h2 className={styles['clients__banner__title']}>Joignez-vous à d&apos;autres !</h2>
-        <div style={{display: animation ? 'block' : 'none'}}>
+        
         <Animation />
-        </div>
+        
         <img id='tim' className={styles['clients__banner__img']} src={isMobile ? tim : timD} alt="" />
         
          </article>
