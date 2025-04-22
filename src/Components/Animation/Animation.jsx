@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const CanvasAnimation = (  ) => {
