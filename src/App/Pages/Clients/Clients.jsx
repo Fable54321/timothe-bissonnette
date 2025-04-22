@@ -8,9 +8,13 @@ import Animation from '../../../Components/Animation/Animation'
 
 
 
+
 const Clients = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
+
+
+
   
 
  
@@ -22,8 +26,9 @@ const Clients = () => {
       <article className={`${styles['clients__banner']} ${styles['clients__banner--1']}`}>
         <h2 className={styles['clients__banner__title']}>Joignez-vous à d&apos;autres !</h2>
         
-        <Animation />
+        <Animation  />
         
+      
         <img id='tim' className={styles['clients__banner__img']} src={isMobile ? tim : timD} alt="" />
         
          </article>

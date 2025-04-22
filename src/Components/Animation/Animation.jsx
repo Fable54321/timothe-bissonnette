@@ -1,10 +1,16 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-const CanvasAnimation = () => {
+
+const CanvasAnimation = (  ) => {
   const canvasRef = useRef(null);
   const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
 
+
+
   useEffect(() => {
+
+   
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const stars = Array.from({ length: 300 }, () => ({
@@ -38,12 +44,23 @@ const CanvasAnimation = () => {
   return (
     <canvas
       ref={canvasRef}
-      width={isMobile ? document.getElementById("tim").offsetWidth * 1.2 : document.getElementById("tim").offsetWidth}
-      height={document.getElementById("tim").offsetHeight}
-      style={{ position: "absolute", top: 0, left: isMobile ? 0: "50%" , zIndex: 1, transform: isMobile ? "translateX(0)" : "translateX(-50%)", borderRadius: "2rem" }}
+      width={isMobile ? window.innerWidth : window.innerWidth * 0.55}
+      height={ isMobile ? window.innerWidth / 1.77 : window.innerWidth * 0.55 / 1.77}
+      style={{
+        position: "absolute",
+        top: isMobile ? 0 : "50%",
+        left: isMobile ? 0 : "50%",
+        zIndex: 1,
+        transform: isMobile ? "translate(0, 0)" : "translate(-50%, -50%)",
+        borderRadius: "2rem",
+        
+      }}
+     
     />
   );
 };
+
+
 
 export default CanvasAnimation;
 
