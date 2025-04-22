@@ -1,0 +1,19 @@
+@use "../../Styles/Abstracts/variables" as *;
+
+
+
+.home--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    @media(min-width: $brealkpoint){
+      overflow-y: hidden;
+    }
+  }
+
+.main {
+    display: flex;
+    flex-direction: column;
+}

@@ -11,12 +11,14 @@
     align-self: flex-end;
     position: relative;
     
+    
 
     &__link-list {
         display: flex;
         list-style: none;
         gap: $sz-180;
         align-items: center;
+        
     }
 
     &__link {

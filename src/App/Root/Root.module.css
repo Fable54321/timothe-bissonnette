@@ -1,0 +1,20 @@
+/* colors */
+/*typography */
+/* spacing */
+/* queries */
+.home--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+@media (min-width: 72.5em) {
+  .home--wrapper {
+    overflow-y: hidden;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=Root.module.css.map */

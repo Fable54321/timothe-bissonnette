@@ -1,14 +1,23 @@
 import styles from './Dropdown.module.css'
- import { useState } from 'react'
+ import { useEffect, useState } from 'react'
 import close from '../../assets/images/close.png'
 import PropTypes from 'prop-types'
 
 import ContactMobile from '../ContactMobile/ContactMobile'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+
+
 
 const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
 
- 
+    const location = useLocation();
+
+    useEffect(() => {
+      setMainDisplay(true);
+      setPull(false);
+      setDisplay(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[location])
 
     const handleClick = () => {
 
@@ -56,7 +65,7 @@ const Dropdown = ({ setPull,setDisplay, setMainDisplay }) => {
           ${trigger ? styles["dropdown__list__item--1--active"] : ''}
           ${contactOn ? styles["item--off"] : ''}`}
           >
-            Accueil</li>
+           <Link className={styles["dropdown__list__item__link"]} to = "/" >Accueil </Link></li>
 
           <li className={`
           ${styles["dropdown__list__item"]} 

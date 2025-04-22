@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from  'react'
 import styles from './App.module.css'
-import Home from './Home/Home'
+import Root from './Root/Root'
 import Dropdown from '../Components/Dropdown/Dropdown';
 import { useMediaQuery } from 'react-responsive';
 import menu from '../../src/assets/images/menu.png'
 import Clients from './Pages/Clients/Clients';
+import Home from './Root/Home/Home';
 
 
 function App() {
@@ -79,7 +80,8 @@ const handleClick = () => {
           </div>
     <div  className={  pull && isMobile ? styles["app-pull"] : styles["app"]}>
       <Routes>
-        <Route path="/" element={<Home pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} mainDisplay={mainDisplay} setMainDisplay={setMainDisplay}  />}>
+        <Route path="/" element={<Root pull={pull} setPull={setPull} display={display} setDisplay={setDisplay} mainDisplay={mainDisplay} setMainDisplay={setMainDisplay}  />}>
+        <Route index element= {<Home />} />
         <Route path="/clients" element={<Clients />} />
           
         </Route>

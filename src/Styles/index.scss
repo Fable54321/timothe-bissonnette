@@ -32,6 +32,10 @@ html, body {
     font-size: 1em;
 
     @media(min-width: $brealkpoint){
+        font-size: 1em;
+    }
+
+    @media(min-width: 94em){
         font-size: 1.2em;
     }
 }

@@ -21,7 +21,7 @@
     }
     
     z-index: 1000;
-    width: min(100%, 500px);
+    width: 100%;
     //overflow-y: hidden;
     min-height: 100vh;
 
@@ -39,7 +39,7 @@
     &__close--button {
         background: transparent;
         border: none;
-        width: 12%;
+        width: min(12%, 56px);
         position: absolute;
         top: 2%;
         right: 2%;
@@ -54,7 +54,12 @@
         flex-direction: column;
         gap: $sz-300;
         margin-left: -$sz-280;
-        width: 65%;
+        width: min(65%, 500px);
+
+        @media(min-width: $breakpoint-tablet){
+            font-size: $sz-250;
+            gap: $sz-500;
+        }
         
         ///animations at the bottom to keep this cleared
 

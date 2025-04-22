@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  width: min(100%, 500px);
+  width: 100%;
   background-color: rgba($clr-neutral-1000,0.6);
   padding-block: $sz-200;
   border-bottom-left-radius: $sz-200;
@@ -56,13 +56,13 @@
  
 
   &__logo--wrapper {
-    width: 40%;
+    width: min(40%, 130px);
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      width: 12%;
+      width: min(12%, 40px);
       aspect-ratio: 1/1;
       left: 50.5%;
       top: 92%;
@@ -73,7 +73,16 @@
       animation: opacity 500ms ease-in-out forwards 2s;
     }
 
-    @media(min-width:$brealkpoint){
+    @media(min-width: $brealkpoint){
+      width: 128px;
+
+      &::before {
+        width: 50px;
+        left: $sz-500;
+      }
+    }
+
+    @media(min-width:"94em"){
       width: 128px;
       
 

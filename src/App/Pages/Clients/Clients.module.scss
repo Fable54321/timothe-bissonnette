@@ -1,0 +1,173 @@
+@use ',,/../../../../Styles/Abstracts/variables' as *;
+
+
+
+.clients {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid rgba($clr-accent-ylw, 0.9);
+    border-right: 2px solid rgba($clr-accent-ylw,0.9);
+    border-top-right-radius: $sz-200;
+    border-top-left-radius: $sz-200;
+    gap: $sz-050;
+    
+
+    @media(min-width: $brealkpoint){
+        gap: 0;
+        border: 0;
+    }
+    
+
+    &__banner {
+
+        &--1{
+            position: relative;
+            
+        }
+        
+        // border-bottom : 2px solid rgba($clr-accent-ylw, 0.5);
+        border-radius: $sz-200;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        position: relative;
+
+
+        @media(min-width: $brealkpoint){
+            border-left: 2px solid $clr-accent-ylw;
+                border-right: 2px solid $clr-accent-ylw;
+            width: 99%;
+            border-radius: $sz-150;
+            padding-block: $sz-200;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: $clr-neutral-900;
+            display: flex;
+            justify-content: center;
+            
+
+
+        }
+
+        
+
+      
+       
+        
+
+        &__title {
+            font-family: $ff-primary;
+            font-size: $sz-220;
+            text-align: center;
+            width: 80%;
+            position: absolute;
+            z-index: 1000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 3px 3px 4px rgba(0,0,0,0.6), -3px -3px 4px rgba(0,0,0,0.6);
+
+            
+        }
+
+
+        &__img {
+
+            position: relative;
+            
+            // aspect-ratio: 16/7.5;
+            border-radius: $sz-200;
+            object-fit: cover;
+            opacity: 0.7;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            z-index: 999;
+           @media(min-width: $brealkpoint){
+            
+             aspect-ratio: inherit;
+
+            opacity: 0.9;
+            border-radius: 0;
+            width: 50%;
+            position: relative;
+           z-index: 999;
+            
+
+           }
+            
+        }
+
+        &--container {
+
+            display: flex;
+            flex-direction: column;
+            gap: $sz-050;
+
+            @media (min-width: $brealkpoint){
+                width: 99%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                border-left: 2px solid $clr-accent-ylw;
+                border-right: 2px solid $clr-accent-ylw;
+                background-color: $clr-neutral-900;
+                gap: $sz-200;
+            }
+        }
+
+        &--2 {
+            width: 100%;
+            border-radius: 0;
+            
+            @media(min-width: $brealkpoint){
+                border: 0;
+                width: 43%;
+            }
+
+             &__title {
+                font-family: $ff-primary;
+                font-size: $sz-220;
+                text-align: center;
+                width: 80%;
+                position: absolute;
+                z-index: 1000;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-shadow: 1px 1px 3px rgba(0,0,0,0.6), -1px -1px 3px rgba(0,0,0,0.6);
+                text-decoration: underline;
+             }
+             &__img--wrapper {
+                
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                
+             }
+
+             &__img {
+                
+                opacity: 0.7;
+                
+                object-fit: cover;
+
+                @media(min-width: $brealkpoint){
+                    width: 100%;
+                    border-radius: $sz-200;
+                    opacity: 0.7;
+                }
+                
+             }
+        }
+
+        
+
+    }
+}
+
+a {
+    color: inherit;
+    
+}

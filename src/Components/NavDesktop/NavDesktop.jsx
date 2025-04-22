@@ -28,9 +28,9 @@ const NavDesktop = () => {
     <nav className={styles['nav-desktop']}>
       <ul className={styles["nav-desktop__link-list"]}>
         <Contact contactDesktop={contactDesktop} setContactDesktop={setContactDesktop} />
-        <li><Link className={styles["nav-desktop__link"]} to = "/home">Accueil</Link></li>
+        <li><Link className={styles["nav-desktop__link"]} to = "/">Accueil</Link></li>
         <button onClick={() => handleClick()} ><li id='contact' style={{minWidth: contactDesktop ? `${linkWidth}px` : "auto"}} className={`${styles["nav-desktop__link"]} ${contactDesktop && styles["nav-desktop__link--active"]}`}>{contactDesktop ? "Fermer" : "Contactez-moi"}</li></button>
-        <li ><Link  className={styles["nav-desktop__link"]} to = "">Clients satisfaits</Link></li>
+        <li ><Link  className={styles["nav-desktop__link"]} to = "/clients">Clients satisfaits</Link></li>
         
       </ul>
     </nav>

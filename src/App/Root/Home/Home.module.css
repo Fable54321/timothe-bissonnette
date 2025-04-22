@@ -8,13 +8,14 @@
   align-items: center;
   min-height: 100vh;
 }
-.home--wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
+@media (min-width: 37.5em) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
 }
-@media (min-width: 62.5em) {
+@media (min-width: 72.5em) {
   .home {
     display: grid;
     justify-items: center;
@@ -51,9 +52,33 @@
   border-bottom: none;
   padding-bottom: 1rem;
   position: relative;
-  width: min(100%, 500px);
+  width: min(100%, 600px);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 37.5em) {
+  .home__section--wrapper {
+    height: 100%;
+  }
+  .home__section--wrapper--1 {
+    border-left: none;
+    border-bottom: 1px solid #efc52e;
+  }
+  .home__section--wrapper--2 {
+    border-right: none;
+    border-bottom: 1px solid #efc52e;
+  }
+  .home__section--wrapper--3 {
+    grid-column-start: 2;
+    border-right: none;
+    border-top: 1px solid #efc52e;
+  }
+  .home__section--wrapper--4 {
+    border-left: none;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    border-top: 1px solid #efc52e;
+  }
+}
+@media (min-width: 72.5em) {
   .home__section--wrapper {
     justify-content: center;
     width: 100%;
@@ -93,12 +118,12 @@
   font-family: "Lora", sans-serif;
   font-size: 2rem;
   color: #EEEEFF;
-  width: 90%;
+  width: min(90%, 450px);
 }
 .home__section__description {
   font-family: "JetBrains Mono", sans-serif;
   text-align: center;
-  width: 90%;
+  width: min(90%, 460px);
 }
 .home__section__img {
   position: absolute;

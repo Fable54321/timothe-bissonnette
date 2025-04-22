@@ -2,7 +2,7 @@
 /*typography */
 /* spacing */
 /* queries */
-@media (max-width: 62.5em) {
+@media (max-width: 72.5em) {
   .nav-desktop {
     display: none;
   }

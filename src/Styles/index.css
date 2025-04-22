@@ -60,7 +60,12 @@ body {
 html, body {
   font-size: 1em;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 72.5em) {
+  html, body {
+    font-size: 1em;
+  }
+}
+@media (min-width: 94em) {
   html, body {
     font-size: 1.2em;
   }
