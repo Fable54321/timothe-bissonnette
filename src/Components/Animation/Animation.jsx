@@ -1,100 +1,50 @@
+import { useEffect, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+const CanvasAnimation = () => {
+  const canvasRef = useRef(null);
+  const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
 
-const Animation = () => {
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const stars = Array.from({ length: 300 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2 + 1,
+      opacity: Math.random() * 0.5 + 0.5,
+      dx: Math.random() * 0.5 - 0.25,
+      dy: Math.random() * 0.5 - 0.25,
+    }));
 
-    const animations = {
-      1: 'moveLeft',
-      2: 'moveRight',
-      3: 'moveUp',
-      4: 'moveDown'
-    }
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      stars.forEach((star) => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(239, 197, 46, ${star.opacity})`;
+        ctx.fill();
+        star.x += star.dx;
+        star.y += star.dy;
 
-    const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
+        if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
+        if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
+      });
+      requestAnimationFrame(draw);
+    };
+
+    draw();
+  }, []);
 
   return (
-    <>
-      <div className="animation-container">
-        {[...Array(1200)].map((_, i) => (
-          <div
-            key={i}
-            className="dot"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              width: `${Math.floor(Math.random()*5)}px`,
-              opacity: `${Math.floor(Math.random()* 6 + 5)/10}`,
-              animation: `${animations[Math.floor(Math.random() * 4) + 1]} 40s ease-in-out infinite`,
-              
-            }}
-          />
-        ))}
-      </div>
-      <style>{`
-        .animation-container {
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: ${isMobile ? '100%' : '70%'};
-          height: 100%;
-          overflow: hidden;
-          z-index: 1;
-        }
-        .dot {
-          position: absolute;
-          border-radius: 100vw;
-          aspect-ratio: 1/1;
-          background-color: #efc52e;
-          mix-blend-mode: multiply;
-        }
-        @keyframes moveLeft {
-          0% {
-            transform: translateX(0);
-          }
-          50%{
-            transform: translateX(-40vw);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-        @keyframes moveRight {
-          0% {
-            transform: translateX(0);
-          }
-          50% {
-            transform: translateX(40vw);
-          }
-          100%{
-            transform: translateX(0);
-          }  
-        }
-        @keyframes moveUp {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-40vh);
-          }
-          100%{
-            transform: translateY(0);
-          }  
-        }
-        @keyframes moveDown {
-          0% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(40vh);
-          }
-          100%{
-            transform: translateY(0);}  
-        }
-      `}</style>
-    </>
+    <canvas
+      ref={canvasRef}
+      width={isMobile ? document.getElementById("tim").offsetWidth * 1.2 : document.getElementById("tim").offsetWidth}
+      height={document.getElementById("tim").offsetHeight}
+      style={{ position: "absolute", top: 0, left: isMobile ? 0: "50%" , zIndex: 1, transform: isMobile ? "translateX(0)" : "translateX(-50%)", borderRadius: "2rem" }}
+    />
   );
 };
 
-export default Animation;
+export default CanvasAnimation;
+
 

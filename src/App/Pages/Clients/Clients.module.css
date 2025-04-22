@@ -67,7 +67,7 @@
 @media (min-width: 72.5em) {
   .clients__banner__img {
     aspect-ratio: inherit;
-    opacity: 0.9;
+    opacity: 0.7;
     border-radius: 0;
     width: 50%;
     position: relative;
