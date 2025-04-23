@@ -4,7 +4,7 @@ import styles from './NavBar.module.css'
 import logo from '../../../assets/images/logo.png'
 
 import NavDesktop from '../../../Components/NavDesktop/NavDesktop'
-import { useLocation } from 'react-router-dom'
+
 
 
 
@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom'
 const NavBar = () => {
 
   
-const location = useLocation();
+
 
 
   return (
@@ -23,7 +23,7 @@ const location = useLocation();
      
       <div  className={styles["nav-bar__logo--wrapper"]}>
         <img
-          style={{animation: location.pathname === '/' ? 'inherit' : 'none'}}
+         
           className={styles["nav-bar__logo"]}
           src={logo}
           alt="Logo"
