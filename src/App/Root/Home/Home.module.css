@@ -123,6 +123,11 @@
   text-align: center;
   width: min(90%, 460px);
 }
+@media (min-width: 72.5em) {
+  .home__section__description {
+    width: min(80%, 550px);
+  }
+}
 .home__section__img {
   position: absolute;
   z-index: -1;

@@ -141,11 +141,17 @@
     
     width: min(90%, 450px);
   }
+
+
   
   &__description {
     font-family: $ff-secondary;
     text-align: center;
     width: min(90%, 460px);
+
+    @media(min-width: $brealkpoint){
+      width: min(80%, 550px);
+    }
   }
   
   &__img {
