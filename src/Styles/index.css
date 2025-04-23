@@ -1,3 +1,7 @@
+/* colors */
+/*typography */
+/* spacing */
+/* queries */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -38,10 +42,11 @@ p {
     scroll-padding-top: 3rem;
   }
 }
-/* colors */
-/*typography */
-/* spacing */
-/* queries */
+@media (prefers-reduced-motion: no-preference) and (prefers-color-scheme: dark) {
+  body {
+    color: #EEEEFF;
+  }
+}
 #root {
   position: relative;
   z-index: -10000;

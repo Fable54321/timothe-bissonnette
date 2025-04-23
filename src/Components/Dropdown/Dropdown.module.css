@@ -58,7 +58,7 @@
   }
 }
 .dropdown__list__item {
-  border-bottom: hsl(188, 83%, 33%) 2px solid;
+  border-bottom: #0e879a 2px solid;
   border-bottom-left-radius: 1rem;
   padding-left: 1rem;
   position: relative;

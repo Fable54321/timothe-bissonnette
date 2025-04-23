@@ -23,7 +23,7 @@
       justify-items: center;
       grid-template-columns: 1fr 1fr;
       grid-auto-rows: 1fr;
-      width: 78%;
+      width: 88%;
       margin-top: $sz-400;
       margin-inline: auto;
       position: relative;
@@ -59,7 +59,7 @@
     width: min(100%, 600px);
 
     @media(min-width: $breakpoint-tablet){
-      height: 100%;
+      
       
 
       &--1 {
@@ -95,6 +95,7 @@
       border-top: none;
       position: relative;
       font-size: $sz-100;
+      padding-bottom: $sz-200;
      
   
       &--1 {

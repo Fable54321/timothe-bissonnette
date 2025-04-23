@@ -1,3 +1,6 @@
+@use "./variables" as *;
+
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -37,4 +40,11 @@
       scroll-behavior: smooth;
       scroll-padding-top: 3rem;
     }
+
+   @media (prefers-color-scheme: dark){
+
+   body{ 
+    color: $clr-neutral-200;
+   }
+   } 
   }
