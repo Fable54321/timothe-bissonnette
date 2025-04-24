@@ -1,0 +1,78 @@
+@use '../../Styles/Abstracts/variables' as *;
+
+
+
+
+.subscription {
+    margin-top: $sz-200;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $sz-200;
+    background-color: rgba($clr-neutral-1000, 0.6);
+    border-radius: $sz-200;
+    border: 1px solid $clr-accent-ylw;
+    border-top: none;
+    border-bottom: none;
+    padding-bottom: $sz-100;
+    position: relative;
+    width: 100%;
+
+    &__title {
+        font-family: $ff-primary;
+        margin-top: $sz-200;
+        font-size: $sz-150;
+        border: 2px solid $clr-accent-blue;
+        border-bottom: none;
+        border-right: none;
+        border-radius: $sz-020;
+        padding: $sz-050;
+        width: fit-content;
+        margin-left: -$sz-080;
+        padding-left: $sz-080;
+        text-align: right;
+        box-shadow: -2px -2px 2px rgba($clr-neutral-200, 0.9);
+       text-shadow: 0px 5px 7px $clr-accent-blue, 0px 5px 7px $clr-accent-blue ;
+    }
+
+    &__list {
+        font-family: $ff-secondary;
+        width: 84%;
+        display: flex;
+        flex-direction: column;
+        gap: $sz-100;
+        list-style: square;
+    }
+
+    &__price {
+        font-family: $ff-secondary;
+        font-size: $sz-150;
+        font-weight: $fw-600;
+        color: $clr-accent-ylw;
+        border-right: 2px solid $clr-accent-blue;
+        border-bottom: 2px solid $clr-accent-blue;
+        box-shadow: 2px 2px 2px rgba($clr-neutral-200, 0.9);
+        border-radius: $sz-020;
+        padding: $sz-050;
+        padding-right: $sz-080;
+        margin-right: -$sz-080;
+    }
+
+
+    &__button {
+            border: 1px solid $clr-accent-blue;
+            padding: 5px;
+            border-radius: $sz-050;
+            background-color: transparent;
+            box-shadow: 1px 1px 1px white;
+            
+
+            &:active {
+                transform: scale(0.9);
+                top: 1px;
+            }
+    }
+}
+
+
