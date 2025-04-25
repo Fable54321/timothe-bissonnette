@@ -32,7 +32,9 @@ const Subscription = () => {
 
 
         try {
-            const response = await axios.post('https://backend.tb-technologies.ca/stripe/create-checkout-session');
+            const response = await axios.post('https://backend.tb-technologies.ca/stripe/create-checkout-session', {
+              withCredentials: true
+            });
             const sessionId = response.data.sessionId;
 
 
