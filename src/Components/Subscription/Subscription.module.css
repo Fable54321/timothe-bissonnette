@@ -15,7 +15,7 @@
   border-bottom: none;
   padding-bottom: 1rem;
   position: relative;
-  width: 100%;
+  width: min(100%, 600px);
 }
 .subscription__title {
   font-family: "Lora", sans-serif;
