@@ -1,10 +1,10 @@
 import { loadStripe } from "@stripe/stripe-js"
 import axios from "axios"
 import styles from './Subscription.module.css'
+import { useEffect } from "react";
 
 
 
-console.log(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 let stripePromise = null;
 
@@ -16,6 +16,11 @@ const initializeStripe = async () => {
 }
 
 const Subscription = () => {
+
+
+  useEffect(() => {
+    console.log(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  },[])
 
     const handleCheckout = async () => {
         const stripe = await initializeStripe();
