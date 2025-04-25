@@ -2,19 +2,33 @@ import { loadStripe } from "@stripe/stripe-js"
 import axios from "axios"
 import styles from './Subscription.module.css'
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+
 
 console.log(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+
+let stripePromise = null;
+
+const initializeStripe = async () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  }
+  return stripePromise;
+}
 
 const Subscription = () => {
 
     const handleCheckout = async () => {
-        const stripe = await stripePromise;
+        const stripe = await initializeStripe();
+
+        if (!stripe) {
+          console.error('Stripe is not initialized');
+            return;
+        }
 
 
         try {
             const response = await axios.post('https://backend.tb-technologies.ca/stripe/create-checkout-session');
-            const sessionId = response.data.id;
+            const sessionId = response.data.sessionId;
 
 
             const result = await stripe.redirectToCheckout({
