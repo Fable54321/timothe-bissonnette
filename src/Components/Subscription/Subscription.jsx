@@ -13,7 +13,7 @@ const Subscription = () => {
 
 
         try {
-            const response = await axios.post('https://api.tb-technologies.ca/create-checkout-session');
+            const response = await axios.post('https://backend.tb-technologies.ca/stripe/create-checkout-session');
             const sessionId = response.data.id;
 
 
