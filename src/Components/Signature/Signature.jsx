@@ -3,6 +3,7 @@ import styles from './Signature.module.css'
 import SignatureCanvas from "react-signature-canvas"
 import PropTypes from "prop-types";
 
+
 const Signature = ({ onSave }) => {
 
     const sigCanvas = useRef();
@@ -11,15 +12,20 @@ const Signature = ({ onSave }) => {
       sigCanvas.current.clear();
     };
   
+    
+
     const handleSave = () => {
       if (sigCanvas.current.isEmpty()) {
         alert("Please sign before saving!");
         return;
       }
-      console.log(sigCanvas.current)
+    
       
       const dataURL = sigCanvas.current.toDataURL('image/png');
+      console.log(dataURL);
         onSave(dataURL);
+
+      
       
     };
   

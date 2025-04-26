@@ -10,7 +10,13 @@ const Contract = () => {
     const [agreed, setAgreed] = useState(false);
     const [contract, setContract] = useState('');
 
+
+   
+
     const handleSignatureSave = async (signatureDataUrl) => {
+
+
+      
        
         if (!name.trim()) {
             alert('Veuillez entrer votre nom.');
