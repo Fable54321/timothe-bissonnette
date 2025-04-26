@@ -1,0 +1,48 @@
+/* colors */
+/*typography */
+/* spacing */
+/* queries */
+* {
+  list-style: none !important;
+}
+
+.contract__1 {
+  background-color: #EEEEFF;
+  color: hsl(0, 0%, 0%);
+  padding-bottom: 1rem;
+  width: min(105%, 800px);
+}
+.contract__1__title {
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "helvetica";
+  text-align: center;
+  margin-top: 0;
+}
+.contract__1__list {
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contract__1__list strong {
+  font-weight: 600;
+}
+.contract__1__list__item {
+  font-weight: 600;
+  font-size: 1.5rem;
+  list-style: none;
+}
+.contract__1__list__item__content {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+.contract__1__list__item__content li {
+  list-style: none;
+}/*# sourceMappingURL=Contract--1.module.css.map */

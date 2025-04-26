@@ -8,6 +8,7 @@ import menu from '../../src/assets/images/menu.png'
 import Clients from './Pages/Clients/Clients';
 import Home from './Root/Home/Home';
 import Subscription from '../Components/Subscription/Subscription';
+import Contract from '../Components/Contract/Contract';
 
 
 function App() {
@@ -85,6 +86,7 @@ const handleClick = () => {
           <Route index element= {<Home />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/paiement" element= {<Subscription />} />
+          <Route path='/contrat--001' element={<Contract />} />
         </Route>
         
       </Routes>

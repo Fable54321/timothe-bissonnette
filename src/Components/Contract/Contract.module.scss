@@ -1,0 +1,49 @@
+@use '../../Styles/Abstracts/variables' as *;
+
+
+.contract {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $ff-primary;
+    margin-top: $sz-100;
+
+    &__title {
+        margin-top: $sz-100;
+        font-size: $sz-130;
+        font-weight: $fw-600;
+    }
+
+    &__form {
+        margin-top: $sz-100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $sz-200;
+        width: 100%;
+
+      
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: $sz-050;
+            width: min(100%, 500px);
+        }
+
+        &__checkbox {
+            
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+                margin: auto auto;
+            }
+        }
+    }
+
+    &__date {
+        margin-top: $sz-100;
+        font-size: $sz-100;
+    }
+}
