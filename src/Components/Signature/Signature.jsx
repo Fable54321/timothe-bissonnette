@@ -38,7 +38,7 @@ const Signature = ({ onSave }) => {
         />
         <div className={styles['signatureContainer__buttons']}>
           <button onClick={handleClear}>Effacer</button>
-          <button onClick={handleSave}>Sauvegarder la signature</button>
+          <button onClick={handleSave}>Soumettre la signature</button>
         </div>
       </div>
     );
