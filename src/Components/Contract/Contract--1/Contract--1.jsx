@@ -2,7 +2,7 @@ import styles from './Contract--1.module.css'
 
 const Contract__1 = () => {
   return (
-    <section className={styles["contract__1"]}>
+    <section id='contrat-tb--001' className={styles["contract__1"]}>
         <h2 className={styles["contract__1__title"]}>contrat-tb--001</h2>
         <ul className={styles["contract__1__list"]}>
             <li className={styles["contract__1__list__item"]}>

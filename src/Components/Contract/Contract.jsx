@@ -10,7 +10,21 @@ const Contract = () => {
     const [agreed, setAgreed] = useState(false);
     const [contract, setContract] = useState('');
 
-
+    const generateContractHash = async () => {
+      const contractElement = document.getElementById('contrat-tb--001'); // Select the contract content
+      const contractHtml = contractElement.innerHTML; // Get the inner HTML of the contract
+      
+      // Encode the HTML string into a buffer
+      const encoder = new TextEncoder();
+      const data = encoder.encode(contractHtml);
+      
+      // Hash the buffer using SHA-256
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);  
+      const hashArray = Array.from(new Uint8Array(hashBuffer));  // Convert buffer to byte array
+      const contractHash = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');  // Convert byte array to hex string
+    
+      return contractHash;
+    };
    
 
     const handleSignatureSave = async (signatureDataUrl) => {
@@ -43,6 +57,9 @@ const Contract = () => {
             return;
           }
 
+
+        const contractHash = await generateContractHash();
+
         const res = await fetch('https://backend.tb-technologies.ca/signature/save-signature', {
           method: 'POST',
           headers: {
@@ -54,6 +71,7 @@ const Contract = () => {
             email: email,  // Also from a form
             agreed: agreed,
             contract: contract,
+            contractHash: contractHash,
             date: new Date().toLocaleDateString(),
             time: new Date().toLocaleTimeString(),
           }),
