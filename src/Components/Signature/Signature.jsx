@@ -18,8 +18,7 @@ const Signature = ({ onSave }) => {
       }
       console.log(sigCanvas.current)
       
-      const signaturePad = sigCanvas.current.getSignaturePad();
-      const dataURL = signaturePad.toDataURL('image/png');
+      const dataURL = sigCanvas.current.toDataURL('image/png');
         onSave(dataURL);
       
     };
