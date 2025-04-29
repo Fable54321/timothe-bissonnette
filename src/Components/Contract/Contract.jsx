@@ -27,6 +27,8 @@ const Contract = () => {
     };
    
 
+
+
     const handleSignatureSave = async (signatureDataUrl) => {
 
 
@@ -57,6 +59,13 @@ const Contract = () => {
             return;
           }
 
+          const contractHtml = document.getElementById('contrat-tb--001').innerHTML;
+
+          if(!contractHtml) {
+            alert('Contenu du contrat manquant');
+            return;
+          }
+
 
         const contractHash = await generateContractHash();
 
@@ -72,6 +81,7 @@ const Contract = () => {
             agreed: agreed,
             contract: contract,
             contractHash: contractHash,
+            contractHtml: contractHtml,
             date: new Date().toLocaleDateString(),
             time: new Date().toLocaleTimeString(),
           }),

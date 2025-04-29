@@ -1,0 +1,113 @@
+@use '../../Styles/Abstracts/variables' as *;
+
+
+
+.contact {
+    
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+    justify-content: center;
+    
+    width: min(100%, 700px);
+    
+    
+        position: relative;
+        
+        top: 170%;
+        z-index: 2000;
+        background-color: $clr-neutral-900;
+        border: 2px solid $clr-accent-ylw;
+        border-top: none;
+        border-bottom-left-radius: $sz-100;
+        border-bottom-right-radius: $sz-100;
+        padding-bottom: $sz-100;
+    
+        
+
+    
+    
+    
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $sz-150;
+        font-size: $sz-080;
+        font-family: $ff-primary;
+        width: 100%;
+        position: relative;
+        
+        
+        
+
+        &--group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $sz-100;
+            width: 100%;
+        }
+
+        &--input {
+            width: 65%;
+            border-radius: $sz-050;
+            padding-top: $sz-020;
+        }
+
+
+        &--textarea {
+            width: 80%;
+            height: 220px;
+            border-radius: $sz-150;
+            padding-left: $sz-060;
+            padding-top: $sz-020;
+        }
+
+        &--files {
+            border: 1px solid $clr-accent-blue;
+            padding: 5px;
+            border-radius: $sz-050;
+            box-shadow: 1px 1px 1px white;
+        }
+
+        &__submit-button {
+            border: 1px solid $clr-accent-blue;
+            padding: 5px;
+            border-radius: $sz-050;
+            background-color: transparent;
+            box-shadow: 1px 1px 1px white;
+        }
+
+        &__checkbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: $sz-080;
+            font-family: $ff-primary, "helvetica";
+            font-size: $sz-080;
+
+            input {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    &__error {
+        position:relative;
+         color: $clr-accent-red;
+         font-weight: bold;
+        text-align: center;
+        font-size: $sz-090;
+        margin-top: -$sz-050;
+     }
+
+
+
+
+
+   
+}
