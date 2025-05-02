@@ -1,7 +1,9 @@
 import Signature from "../Signature/Signature"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styles from "./Contract.module.css"
-import Contract__1 from "./Contract--1/Contract--1";
+
+import { Outlet, useLocation } from "react-router-dom";
+
 
 const Contract = () => {
 
@@ -9,10 +11,44 @@ const Contract = () => {
     const [email, setEmail] = useState('');
     const [agreed, setAgreed] = useState(false);
     const [contract, setContract] = useState('');
+    const [contractHtml, setContractHtml] = useState('');
+
+    const location = useLocation();
+  const pathName = location.pathname;
+
+ 
+
+  
+
+  useEffect(() => {
+    let contractElement;
+
+    switch (pathName) {
+      case '/contrat/tb--001':
+        contractElement = document.getElementById('contrat-tb--001');
+        break;
+      case '/contrat/maintenance--001':
+        contractElement = document.getElementById('maintenance--001');
+        break;
+      default:
+        console.log('No contract element found for the given path');
+        return;
+    }
+
+    if (contractElement) {
+      setContractHtml(contractElement.innerHTML);
+    }
+  }, [pathName]);
+
+
+  console.log(contractHtml);
 
     const generateContractHash = async () => {
-      const contractElement = document.getElementById('contrat-tb--001'); // Select the contract content
-      const contractHtml = contractElement.innerHTML; // Get the inner HTML of the contract
+      
+       
+
+      
+    
       
       // Encode the HTML string into a buffer
       const encoder = new TextEncoder();
@@ -27,6 +63,7 @@ const Contract = () => {
     };
    
 
+    const prestataire = "Timothé Bissonnette, Tb Technologies";
 
 
     const handleSignatureSave = async (signatureDataUrl) => {
@@ -59,7 +96,7 @@ const Contract = () => {
             return;
           }
 
-          const contractHtml = document.getElementById('contrat-tb--001').innerHTML;
+          
 
           if(!contractHtml) {
             alert('Contenu du contrat manquant');
@@ -95,8 +132,10 @@ const Contract = () => {
       };
     
       return (
+        <>
+        
         <section className={styles["contract"]}>
-            <Contract__1 />
+        <Outlet context={{ prestataire }} />
           <h2 className={styles["contract__title"]}>Signature du contrat</h2>
           
           <form className={styles["contract__form"]}>
@@ -112,7 +151,8 @@ const Contract = () => {
                 La sélection suivante confirme que vous adhérez bien au contrat montré ci-dessus:
                 <select name="contract" onChange={(e) => setContract(e.target.value)}>
                     <option value="">Sélectionnez un contrat</option>
-                    <option value="contrat-tb--001">contrat-tb--001</option>
+                    {pathName === '/contrat/tb--001' && <option value="contrat-tb--001">contrat-tb--001</option>}
+                    {pathName === '/contrat/maintenance--001' && <option value="maintenance--001">maintenance--001</option>}
                     
                 </select>
             </label>
@@ -126,6 +166,7 @@ const Contract = () => {
           <Signature onSave={handleSignatureSave} />
           
         </section>
+        </>
       );
     };
     

@@ -10,6 +10,8 @@ import Home from './Root/Home/Home';
 import Subscription from '../Components/Subscription/Subscription';
 import Contract from '../Components/Contract/Contract';
 import Email from '../Components/Email/Email';
+import Contract__1 from '../Components/Contract/Contract--1/Contract--1';
+import MonthlyContract from '../Components/Contract/MonthlyContract/MonthlyContract';
 
 
 function App() {
@@ -87,7 +89,10 @@ const handleClick = () => {
           <Route index element= {<Home />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/paiement" element= {<Subscription />} />
-          <Route path='/contrat--001' element={<Contract />} />
+          <Route path='/contrat' element={<Contract />} >
+            <Route path='/contrat/tb--001' element={<Contract__1 />} />
+            <Route path='/contrat/maintenance--001' element={<MonthlyContract />} />
+          </Route>
           <Route path='/email-confirmation' element={<Email />} />
         </Route>
         

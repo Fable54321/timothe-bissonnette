@@ -1,9 +1,14 @@
+import { useOutletContext } from "react-router-dom";
 import styles from "./Contract--1.module.css";
 
 const Contract__1 = () => {
+
+  const { prestataire } = useOutletContext();
+
   return (
     <section id="contrat-tb--001" className={styles["contract__1"]}>
       <h2 className={styles["contract__1__title"]}>contrat-tb--001</h2>
+      <p className={styles["contract__1__prestataire"]}>Prestataire : {prestataire}</p>
       <ul className={styles["contract__1__list"]}>
         <li className={styles["contract__1__list__item"]}>
           <h3>

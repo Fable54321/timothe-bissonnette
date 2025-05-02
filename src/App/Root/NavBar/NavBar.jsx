@@ -30,7 +30,7 @@ const NavBar = () => {
           aria-label="Navigate to the Home page"
         />
       </div>
-      <h1 className={styles["nav-bar__title"]}><span>tb</span> technologies</h1>
+      <h1 translate='no' className={styles["nav-bar__title"]}><span>tb</span> technologies</h1>
       <NavDesktop />
     
     </header>

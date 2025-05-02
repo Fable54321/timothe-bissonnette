@@ -26,7 +26,7 @@ const Clients = () => {
       <article className={`${styles['clients__banner']} ${styles['clients__banner--1']}`}>
         <h2 className={styles['clients__banner__title']}>Joignez-vous à d&apos;autres !</h2>
         
-        <Animation  />
+        <Animation style={{display: 'none'}}  />
         
       
         <img id='tim' className={styles['clients__banner__img']} src={isMobile ? tim : timD} alt="" />

@@ -11,6 +11,21 @@
     margin-bottom: $sz-100;
     font-family: $ff-secondary;
     width: 100%;
+
+    button { 
+        border: 1px solid $clr-accent-blue;
+        padding: 5px;
+        border-radius: $sz-050;
+        background-color: $clr-neutral-900;
+        box-shadow: 1px 1px 1px white;
+        
+
+        &:active {
+            transform: scale(0.9);
+            top: 1px;
+        }
+    }
+
     &__buttons {
         display: flex;
         gap: $sz-100;

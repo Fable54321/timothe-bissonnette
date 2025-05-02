@@ -1,15 +1,24 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const CanvasAnimation = (  ) => {
   const canvasRef = useRef(null);
   const isMobile = useMediaQuery({ query: '(max-width: 62.5em)' });
+  const [isVisible, setIsVisible] = useState(false);
+  
 
+  useEffect(()=> {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    
+  },[])
 
 
   useEffect(() => {
 
-   
+   if(!isVisible) return; 
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -39,7 +48,7 @@ const CanvasAnimation = (  ) => {
     };
 
     draw();
-  }, []);
+  }, [isVisible]);
 
   return (
     <canvas
