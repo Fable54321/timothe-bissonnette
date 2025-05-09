@@ -14,16 +14,15 @@
     border-bottom: none;
     padding-bottom: $sz-150;
     position: absolute;
-    
+    z-index: 1000;
+    width: 100%;
+    min-height: 100vh;
 
     @media(min-width: $brealkpoint){
         display: none;
     }
     
-    z-index: 1000;
-    width: 100%;
-    //overflow-y: hidden;
-    min-height: 100vh;
+    
 
     &--wrapper {
         min-height: 100vh;
