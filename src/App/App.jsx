@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from  'react'
-import styles from './App.module.css'
+import styles from './App.module.scss'
 import Root from './Root/Root'
 import Dropdown from '../Components/Dropdown/Dropdown';
 import { useMediaQuery } from 'react-responsive';
@@ -12,6 +12,7 @@ import Contract from '../Components/Contract/Contract';
 import Email from '../Components/Email/Email';
 import Contract__1 from '../Components/Contract/Contract--1/Contract--1';
 import MonthlyContract from '../Components/Contract/MonthlyContract/MonthlyContract';
+import Advertisement from '../Components/Advertisement/Advertisement';
 
 
 function App() {
@@ -94,6 +95,7 @@ const handleClick = () => {
             <Route path='/contrat/maintenance--001' element={<MonthlyContract />} />
           </Route>
           <Route path='/email-confirmation' element={<Email />} />
+          <Route path='/offre' element={<Advertisement />} />
         </Route>
         
       </Routes>

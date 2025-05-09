@@ -1,4 +1,4 @@
-import styles from './Clients.module.css'
+import styles from './Clients.module.scss'
 import tim from '../../../assets/images/tim--mod.png'
 import timD from '../../../assets/images/tim--mod.png'
 import jb from '../../../assets/images/jb-concept--1.png'

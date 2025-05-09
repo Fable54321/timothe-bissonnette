@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 import NavBar from "./NavBar/NavBar"
-import styles from './Root.module.css'
+import styles from './Root.module.scss'
 
 // import {  useState } from "react"
  import { Outlet } from "react-router-dom";

@@ -1,6 +1,6 @@
 import { loadStripe } from "@stripe/stripe-js"
 import axios from "axios"
-import styles from './Subscription.module.css'
+import styles from './Subscription.module.scss'
 import { useEffect } from "react";
 
 

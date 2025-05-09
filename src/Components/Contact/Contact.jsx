@@ -1,4 +1,4 @@
-import styles from './Contact.module.css'
+import styles from './Contact.module.scss'
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import Confirmation from '../Confirmation/Confirmation'

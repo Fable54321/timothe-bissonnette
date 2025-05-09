@@ -1,4 +1,4 @@
-import styles from "./MonthlyContract.module.css";
+import styles from "./MonthlyContract.module.scss";
 import PropTypes from "prop-types";
 import { useOutletContext } from "react-router-dom";
 

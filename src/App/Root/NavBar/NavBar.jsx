@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './NavBar.module.css'
+import styles from './NavBar.module.scss'
 
 import logo from '../../../assets/images/logo.png'
 

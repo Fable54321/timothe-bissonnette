@@ -3,7 +3,7 @@ import cloud from '../../../assets/images/cloud.png'
 import vscode from "../../../assets/images/vscode-alt.png";
 import lowPrice from '../../../assets/images/low-price.png'
 import responsive from '../../../assets/images/responsive.png'
-import styles from '../Home/Home.module.css'
+import styles from '../Home/Home.module.scss'
 
 const Home = () => {
   return (

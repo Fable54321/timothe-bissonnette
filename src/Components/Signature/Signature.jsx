@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import styles from './Signature.module.css'
+import styles from './Signature.module.scss'
 import SignatureCanvas from "react-signature-canvas"
 import PropTypes from "prop-types";
 

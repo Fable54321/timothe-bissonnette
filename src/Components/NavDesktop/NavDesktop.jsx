@@ -1,4 +1,4 @@
-import styles from './NavDesktop.module.css'
+import styles from './NavDesktop.module.scss'
 import { Link } from 'react-router-dom'
 import Contact from '../Contact/Contact'
 import { useState, useEffect } from 'react'

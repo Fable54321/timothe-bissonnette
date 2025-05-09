@@ -1,4 +1,4 @@
-import styles from './Dropdown.module.css'
+import styles from './Dropdown.module.scss'
  import { useEffect, useState } from 'react'
 import close from '../../assets/images/close.png'
 import PropTypes from 'prop-types'

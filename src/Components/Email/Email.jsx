@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styles from './Email.module.css'
+import styles from './Email.module.scss'
 import Confirmation  from '../Confirmation/Confirmation'
 
 

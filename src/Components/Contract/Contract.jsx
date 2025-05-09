@@ -1,6 +1,6 @@
 import Signature from "../Signature/Signature"
 import { useState, useEffect } from "react"
-import styles from "./Contract.module.css"
+import styles from "./Contract.module.scss"
 
 import { Outlet, useLocation } from "react-router-dom";
 

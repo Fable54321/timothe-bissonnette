@@ -1,5 +1,5 @@
 import ConfirmationMobile from '../ConfirmationMobile/ConfirmationMobile'
-import styles from './ContactMobile.module.css'
+import styles from './ContactMobile.module.scss'
 import { useState } from 'react'
 
 

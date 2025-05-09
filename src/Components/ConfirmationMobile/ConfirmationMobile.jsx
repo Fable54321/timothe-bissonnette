@@ -1,4 +1,4 @@
-import styles from './ConfirmationMobile.module.css'
+import styles from './ConfirmationMobile.module.scss'
 import PropTypes from 'prop-types'
 
 const ConfirmationMobile = ( { setConfirmed } ) => {

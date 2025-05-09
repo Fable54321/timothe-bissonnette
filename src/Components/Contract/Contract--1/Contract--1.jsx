@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import styles from "./Contract--1.module.css";
+import styles from "./Contract--1.module.scss";
 
 const Contract__1 = () => {
 
