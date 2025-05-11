@@ -62,7 +62,7 @@ return (
                 </li>
                 
                 <li className={styles.Advertisement__item}>
-                    Frais de maitenance et de serveur pour aussi peu que 25$ par mois (aucun frais mensuel avant la livraison du site web)
+                    Frais de maintenance et de serveur pour aussi peu que 25$ par mois (aucun frais mensuel avant la livraison du site web)
                 </li>
             </ul>
 
