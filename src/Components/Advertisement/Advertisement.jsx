@@ -45,7 +45,7 @@ return (
             <h3 className={styles.Advertisement__subTitle}>L&apos;essentiel web</h3>
             <ul className={styles.Advertisement__list}>
                 <li className={styles.Advertisement__item}>
-                    Jusqu&apos;à six pages principales (accueil, à propos, contact,
+                    Jusqu&apos;à huit pages principales (accueil, à propos, contact,
                     etc...)
                 </li>
                 <li className={styles.Advertisement__item}>
