@@ -66,7 +66,7 @@ return (
                 </li>
             </ul>
 
-            <p className={styles['Advertisement__price--before']}>3000$</p>
+            <p className={styles['Advertisement__price--before']}>4000$</p>
             <p className={styles['Advertisement__price--after']}>2700$ <br/><span>CAD</span></p>
             <form onSubmit={handleSubmit} className={styles.Advertisement__form}>
                 <div className={styles.Advertisement__inputGroup}>
