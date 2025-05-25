@@ -36,8 +36,8 @@
     &__subTitle{
         margin-top: $sz-050;
         margin-left: -$sz-100;
-        padding-bottom: $sz-050;
-        padding-left: $sz-100;
+        padding-bottom: $sz-070;
+        padding-left: $sz-050;
         box-shadow: -2px 2px 2px rgba($clr-neutral-200, 0.9);
         border-radius: $sz-020;
         text-align: center;
@@ -47,7 +47,6 @@
         border: 2px solid $clr-accent-blue;
         border-top: none;
         border-right: none;
-        width: 55%;
     }
 
     &__list {
