@@ -61,9 +61,6 @@ return (
                     m&apos;adapte à vous{" "}
                 </li>
                 
-                <li className={styles.Advertisement__item}>
-                    Frais de maintenance et de serveur pour aussi peu que 25$ par mois (aucun frais mensuel avant la livraison du site web)
-                </li>
             </ul>
 
             <p className={styles['Advertisement__price--before']}>4000$</p>
