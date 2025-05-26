@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
         return;
     }
 
-    fetch('https://backend.tb-technologies.ca/offer/interest', {
+    fetch('https://single-instance.tb-technologies.ca/offer/interest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

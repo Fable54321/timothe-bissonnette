@@ -152,7 +152,7 @@ const ContactMobile = () => {
         });
       }
 
-      fetch('https://backend.tb-technologies.ca/send-email', {
+      fetch('https://single-instance.tb-technologies.ca/send-email', {
         method: 'POST',
         body: formData
       })

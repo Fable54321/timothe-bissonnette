@@ -106,7 +106,7 @@ const Contract = () => {
 
         const contractHash = await generateContractHash();
 
-        const res = await fetch('https://backend.tb-technologies.ca/signature/save-signature', {
+        const res = await fetch('https://single-instance.tb-technologies.ca/signature/save-signature', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
