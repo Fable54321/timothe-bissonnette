@@ -9,6 +9,15 @@
     font-family: $ff-secondary;
     width: 95%;
 
+    &__description {
+        text-align: center;
+        margin-top: $sz-100;
+        width: max(80%, 270px);
+        font-size: $sz-200;
+        font-family: $ff-primary;
+        font-weight: 700;
+    }
+
     @media(min-width: 94em){
         font-size: 0.8em;
     }
@@ -58,7 +67,6 @@
         flex-direction: column;
         gap: $sz-100;
         
-        
 
         
     }
@@ -66,6 +74,7 @@
     &__item {
 
         position: relative;
+ 
 
         &::before {
             position: absolute;
@@ -79,7 +88,15 @@
             background-color: $clr-accent-ylw;
             
         }
+
+        &--bold {
+            font-size: $sz-180;
+            font-weight: $fw-600;
+            text-align: center;
+        }
     }
+
+  
 
     &__price--before {
         margin-top: $sz-100;
@@ -145,6 +162,8 @@
             top: 1px;
         }
 }
+
+ 
 
    
 } 

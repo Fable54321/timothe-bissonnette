@@ -43,7 +43,7 @@ return (
         <article className={styles.Advertisement__content}>
             <h2 className={styles.Advertisement__title}>Offre à durée limitée</h2>
             <h3 className={styles.Advertisement__subTitle}>L&apos;essentiel web</h3>
-            <ul className={styles.Advertisement__list}>
+            <ul  className={styles.Advertisement__list}>
                 <li className={styles.Advertisement__item}>
                     Jusqu&apos;à huit pages principales (accueil, à propos, contact,
                     etc...)
@@ -57,11 +57,15 @@ return (
                 </li>
                 <li className={styles.Advertisement__item}>
                     Que vous sachiez déjà ce que vous voulez pour un processus accéléré,
-                    ou que ayez besoin de conseils dans un processus par étape, je
+                    ou que ayez besoin de conseils dans un processus par étapes, je
                     m&apos;adapte à vous{" "}
                 </li>
+               
+                
+                   
                 
             </ul>
+            <p className={styles['Advertisement__description']}>Un site pro, sans souci : je gère tout pour vous.</p>
 
             <p className={styles['Advertisement__price--before']}>4000$</p>
             <p className={styles['Advertisement__price--after']}>2300$ <br/><span>CAD</span></p>
